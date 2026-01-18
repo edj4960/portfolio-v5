@@ -22,7 +22,10 @@ export default function Navbar() {
     <div className="navbar mx-auto w-full max-w-6xl px-6">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label
+            tabIndex={0}
+            className="btn btn-ghost lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -40,13 +43,18 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+            className="menu menu-sm dropdown-content mt-3 w-52 rounded-box border border-base-300 bg-base-100 p-2 shadow"
           >
             {navLinks.map((link) => {
               const isActive = isActiveLink(link.href);
               return (
                 <li key={link.href}>
-                  <Link className={isActive ? "active" : undefined} href={link.href}>
+                  <Link
+                    className={`${
+                      isActive ? "bg-base-200 font-medium" : ""
+                    } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}
+                    href={link.href}
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -66,9 +74,11 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`btn btn-ghost btn-sm ${
-                    isActive ? "text-primary" : "text-base-content/70"
-                  }`}
+                  className={`btn btn-ghost btn-sm transition ${
+                    isActive
+                      ? "bg-base-200 text-base-content"
+                      : "text-base-content/70 hover:text-base-content"
+                  } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}
                 >
                   {link.label}
                 </Link>
@@ -78,7 +88,10 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <Link href="/contact" className="btn btn-primary btn-sm">
+        <Link
+          href="/contact"
+          className="btn btn-primary btn-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        >
           Let&#39;s talk
         </Link>
       </div>
