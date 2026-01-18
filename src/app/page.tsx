@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const featuredWork = [
   {
-    title: "Pixel-Perfect Build: Design → Production Next.js Site",
+    title: "Pixel-Perfect Build",
+    subtitle: "Design → Production Next.js Site",
     description:
       "A full marketing site implemented from a Figma design with accessible UI, responsive layout system, optimized images, and SEO.",
     category: "Design Implementation",
@@ -26,7 +27,8 @@ const featuredWork = [
     ),
   },
   {
-    title: "Production Debugging: Fixing Real Next.js Issues",
+    title: "Production Debugging",
+    subtitle: "Fixing Real Next.js Issues",
     description:
       "A structured troubleshooting project showcasing solutions for hydration mismatches, caching bugs, env issues, and performance regressions.",
     category: "Debugging",
@@ -49,7 +51,8 @@ const featuredWork = [
     ),
   },
   {
-    title: "CMS Integration: Modular Page Builder + Preview Workflow",
+    title: "CMS Integration",
+    subtitle: "Modular Page Builder + Preview",
     description:
       "CMS-driven component architecture with schema validation, preview mode, editor-friendly structure, and clean separation of client/server concerns.",
     category: "CMS Architecture",
@@ -72,7 +75,8 @@ const featuredWork = [
     ),
   },
   {
-    title: "Business Feature Build: Search + Filtering + Checkout Flow",
+    title: "Search + Checkout",
+    subtitle: "Filtering + Checkout Flow",
     description:
       "Production-style implementation of faceted search and a clean checkout flow built with modern patterns and maintainable code structure.",
     category: "Business Feature",
@@ -115,22 +119,21 @@ const techStack = [
 export default function Home() {
   return (
     <div className="space-y-20">
-      <section className="relative overflow-hidden rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/70 via-base-100 to-base-200/10 px-8 py-14 md:px-14">
+      <section className="relative overflow-hidden rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/70 via-base-100 to-base-200/10 px-8 py-16 md:px-14 md:py-20 lg:py-24">
         <div className="pointer-events-none absolute -right-24 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 left-10 h-40 w-40 rounded-full bg-secondary/10 blur-3xl" />
-        <div className="relative space-y-8">
+        <div className="relative flex flex-col justify-center space-y-10">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="badge badge-outline">Limited availability — evenings/weekends</span>
             <span className="badge badge-ghost text-xs uppercase tracking-[0.3em] text-base-content/60">
               Full Stack Next.js Developer
             </span>
           </div>
-          <div className="space-y-6">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              I build and rescue production Next.js websites.
+          <div className="space-y-8">
+            <h1 className="text-4xl font-semibold leading-snug tracking-tight md:text-6xl">
+              I build production Next.js websites.
             </h1>
-            <p className="max-w-3xl text-lg leading-relaxed text-base-content/70 md:text-xl">
-              I’m Evan Jones — a Full Stack Web Developer specializing in Next.js
+            <p className="max-w-3xl text-xl leading-relaxed text-base-content/70 md:text-2xl">
+              I’m Evan, a Full Stack Web Developer specializing in Next.js
               + TypeScript. I help teams ship faster by building pixel-perfect UI
               from designs, fixing hard production bugs, improving performance,
               and implementing CMS-driven architecture.
@@ -160,7 +163,7 @@ export default function Home() {
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
-          <div className="card border border-base-300 bg-base-200/40">
+          <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Build from Designs</h3>
@@ -187,7 +190,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="card border border-base-300 bg-base-200/40">
+          <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Debug + Troubleshoot</h3>
@@ -214,7 +217,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="card border border-base-300 bg-base-200/40">
+          <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">CMS + Content Systems</h3>
@@ -258,7 +261,7 @@ export default function Home() {
             <Link
               key={project.title}
               href={project.href}
-              className="group rounded-2xl border border-base-300 bg-base-100 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/40 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-base-100"
             >
               <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/60">
                 <span className="inline-flex items-center gap-2">
@@ -266,8 +269,13 @@ export default function Home() {
                   {project.category}
                 </span>
               </div>
-              <div className="mt-4 space-y-3">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+              <div className="mt-5 space-y-3">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <p className="text-sm text-base-content/60">
+                    {project.subtitle}
+                  </p>
+                </div>
                 <p className="text-sm text-base-content/70">
                   {project.description}
                 </p>
@@ -280,14 +288,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-base-300 bg-base-200/40 px-6 py-5">
-        <div className="flex flex-wrap items-center gap-4 text-sm text-base-content/70">
-          <span>5+ years in production web apps</span>
-          <span className="hidden h-1 w-1 rounded-full bg-base-content/40 sm:inline-block" />
-          <span>Next.js + TypeScript specialist</span>
-          <span className="hidden h-1 w-1 rounded-full bg-base-content/40 sm:inline-block" />
-          <span>Workflow + reliability improvements through tooling</span>
-        </div>
+      <section className="grid gap-4 md:grid-cols-3">
+        {[
+          { top: "5+ years", bottom: "Production web apps" },
+          { top: "Next.js + TypeScript", bottom: "App Router specialist" },
+          {
+            top: "Tooling-first mindset",
+            bottom: "Workflow + reliability wins",
+          },
+        ].map((item) => (
+          <div
+            key={item.top}
+            className="rounded-2xl border border-base-300 bg-base-100/60 p-5 transition duration-200 hover:bg-base-200/50"
+          >
+            <p className="text-lg font-semibold">{item.top}</p>
+            <p className="text-sm text-base-content/60">{item.bottom}</p>
+          </div>
+        ))}
       </section>
 
       <section className="space-y-10">
@@ -322,7 +339,10 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-3">
             {techStack.map((item) => (
-              <span key={item} className="badge badge-outline px-4 py-3">
+              <span
+                key={item}
+                className="badge badge-outline px-4 py-3 transition duration-200 hover:border-base-200 hover:bg-base-200/50"
+              >
                 {item}
               </span>
             ))}
@@ -335,9 +355,12 @@ export default function Home() {
           <h2 className="text-3xl font-semibold tracking-tight">
             Recognition &amp; feedback
           </h2>
+          <p className="text-sm text-base-content/60">
+            Feedback from people I’ve worked with.
+          </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="relative rounded-2xl border border-base-300 bg-base-100 p-6">
+        <div className="grid items-stretch gap-6 md:grid-cols-2">
+          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
             <span className="absolute right-6 top-6 text-5xl text-base-content/10">
               “
             </span>
@@ -356,7 +379,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative rounded-2xl border border-base-300 bg-base-100 p-6">
+          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
             <span className="absolute right-6 top-6 text-5xl text-base-content/10">
               “
             </span>
@@ -388,11 +411,11 @@ export default function Home() {
             Share your designs, the repo, or the blocker — I’ll suggest the
             fastest path to a clean solution.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="btn btn-primary btn-wide">
+          <div className="flex flex-wrap gap-4 pt-2">
+            <Link href="/contact" className="btn btn-primary btn-lg">
               Let’s talk
             </Link>
-            <Link href="/services" className="btn btn-outline btn-wide">
+            <Link href="/services" className="btn btn-outline btn-md">
               See services
             </Link>
           </div>
