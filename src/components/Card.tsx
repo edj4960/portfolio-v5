@@ -4,8 +4,8 @@ type CardVariant = "default" | "outline" | "muted";
 
 const variantStyles: Record<CardVariant, string> = {
   default: "bg-base-200/40",
-  outline: "border border-base-300 bg-base-100",
-  muted: "border border-base-300 bg-base-200/70",
+  outline: "bg-base-100",
+  muted: "bg-base-200/70",
 };
 
 interface CardProps {
@@ -22,8 +22,10 @@ export default function Card({
   children,
 }: CardProps) {
   return (
-    <div className={`card ${variantStyles[variant]}`}>
-      <div className="card-body gap-4">
+    <div
+      className={`card border border-base-300 transition duration-200 hover:-translate-y-0.5 hover:border-base-200 hover:shadow-lg ${variantStyles[variant]}`}
+    >
+      <div className="card-body gap-4 p-6">
         <div className="space-y-2">
           <h3 className="text-xl font-semibold">{title}</h3>
           <p className="text-sm text-base-content/70">{description}</p>

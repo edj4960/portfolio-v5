@@ -13,6 +13,10 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isActiveLink = (href: string) =>
+    href === "/"
+      ? pathname === href
+      : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <div className="navbar mx-auto w-full max-w-6xl px-6">
@@ -39,7 +43,7 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
           >
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = isActiveLink(link.href);
               return (
                 <li key={link.href}>
                   <Link className={isActive ? "active" : undefined} href={link.href}>
@@ -57,7 +61,7 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 px-1">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = isActiveLink(link.href);
             return (
               <li key={link.href}>
                 <Link

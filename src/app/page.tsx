@@ -41,7 +41,7 @@ const featuredWork = [
 
 export default function Home() {
   return (
-    <div className="space-y-24">
+    <div className="space-y-20">
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 px-8 py-14 md:px-14">
         <div className="space-y-8">
           <p className="text-xs uppercase tracking-[0.35em] text-base-content/60">

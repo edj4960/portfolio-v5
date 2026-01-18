@@ -12,7 +12,7 @@ const strengths = [
 
 export default function AboutPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-20">
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
         <PageHeader
           title="About"

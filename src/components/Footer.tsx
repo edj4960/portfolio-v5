@@ -23,13 +23,13 @@ export default function Footer() {
             </Link>
             <a
               className="link link-hover"
-              href="https://example.com"
+              href="https://linkedin.com/in/evan-d-jones/"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn
             </a>
-            <a className="link link-hover" href="mailto:hello@example.com">
+            <a className="link link-hover" href="mailto:evandj423@gmail.com">
               Email
             </a>
           </div>

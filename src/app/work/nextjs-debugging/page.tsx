@@ -10,7 +10,7 @@ const badges = [
 
 export default function NextjsDebuggingPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-20">
       <div className="flex items-center gap-2 text-sm text-base-content/70">
         <Link href="/work" className="link link-hover">
           ← Back to Work

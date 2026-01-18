@@ -86,7 +86,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-20">
       {toastVisible && (
         <div className="toast toast-top toast-end z-50">
           <div className="alert alert-success">
