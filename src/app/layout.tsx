@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Evan Jones | Next.js Developer",
+  title: "Evan Jones | Full Stack Web Developer",
   description:
-    "Next.js developer specializing in pixel-perfect builds from Figma, production debugging, performance fixes, and CMS-driven sites. Available for freelance and contract work.",
+    "Full Stack Web Developer with 5 years of experience building web applications with Next.js, TypeScript, and modern backend stacks.",
   openGraph: {
-    title: "Evan Jones — Next.js Developer (Build + Debug + Optimize)",
+    title: "Evan Jones — Full Stack Web Developer",
     description:
-      "I build and rescue production Next.js apps: pixel-perfect implementation, debugging/hydration fixes, performance tuning, and CMS integrations.",
+      "Full Stack Web Developer with experience across Next.js, TypeScript, CMS tooling, search, and checkout flows.",
     type: "website",
   },
 };

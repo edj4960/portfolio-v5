@@ -1,0 +1,56 @@
+Evan Jones
+Full Stack Web Developer
+
+Vineyard UT
+425-985-6555
+evandj423@gmail.com
+linkedin.com/in/evan-d-jones/
+
+Detail-oriented Full Stack Web Developer with 5 years of experience developing
+scalable web applications. Proficient in front-end and back-end technologies and
+focused on user-friendly, responsive web experiences.
+
+SKILLS
+Front-end: Next.js, TypeScript, JavaScript, jQuery, HTML, CSS, SCSS, Bootstrap
+Back-end: NodeJS, PHP, Laravel, Perl, ASP.NET, VB.NET, Oracle, MySQL, Firebase
+Other: Git, ButterCMS, ElasticSearch, Algolia, Stripe, VSCode
+
+EXPERIENCE
+Traeger Grills, Salt Lake City UT - Full Stack Developer II
+JAN 2025 - PRESENT
+- Built internal tooling to jump between site components and CMS edit pages.
+- Led CMS schema management to reduce schema drift and deployment overhead.
+- Standardized env validation and client/server boundaries.
+- Contributed to hackathon initiatives and internal tooling.
+- Recognized for reliable delivery and ownership.
+Technologies: Next.js, TypeScript, Node, Amplience CMS, GitLab, Shopify, Zendesk
+
+Partner.Co, American Fork UT - Full Stack Developer II
+SEP 2021 - PRESENT
+- Redesigned checkout flow to improve address and payment completion.
+- Improved ElasticSearch integration for better accuracy and relevance.
+- Built a faster product selection module with lazy loading.
+- Supported a multi-site rebrand with shared design systems.
+- Automated ButterCMS and Bitbucket workflows.
+Technologies: Next.js, Vue, JavaScript, Laravel, PHP, ElasticSearch, Oracle,
+MySQL, ButterCMS
+
+Storier, Provo UT - Full Stack Developer
+APR 2021 - SEP 2021
+- Redesigned Storier.fm and integrated Algolia search.
+- Built a 3-tier subscription flow and Stripe integration.
+- Shipped the Storier app on schedule.
+- Implemented token-based book purchase allocation.
+Technologies: React, React Native, JavaScript, NodeJS, Stripe, Firebase, Algolia,
+SCSS, Git
+
+BYU Campus Accommodations, Provo UT - Full Stack Developer
+APR 2019 - APR 2021
+- Maintained Housing.byu.edu with bug fixes and new features.
+- Promoted to Lead Developer and guided system architecture.
+Technologies: ASP.NET, VB.NET, JavaScript, jQuery, HTML, CSS, SCSS, Bootstrap,
+Oracle, Git
+
+EDUCATION
+Brigham Young University, Provo UT - B.S. in Computer Science
+APR 2021

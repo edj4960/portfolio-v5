@@ -86,7 +86,7 @@ export default function ServicesPage() {
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
         <PageHeader
           title="Services"
-          subtitle="Fast, high-quality Next.js work for teams who need someone who can build from designs and also handle production issues without babysitting."
+          subtitle="Full stack web development, debugging, and CMS work."
         />
       </section>
 
@@ -96,8 +96,7 @@ export default function ServicesPage() {
             Service options
           </h2>
           <p className="max-w-3xl text-base text-base-content/70">
-            Clear scopes, fast collaboration, and deliverables that make a
-            measurable impact.
+            Clear scopes and deliverables.
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
@@ -154,7 +153,7 @@ export default function ServicesPage() {
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">FAQ</h2>
           <p className="max-w-2xl text-base text-base-content/70">
-            Answers to the most common questions before we kick off.
+            Common questions.
           </p>
         </div>
         <div className="space-y-3">
@@ -175,11 +174,10 @@ export default function ServicesPage() {
       <section className="card border border-base-300 bg-base-200/40">
         <div className="card-body space-y-4">
           <h2 className="text-2xl font-semibold tracking-tight">
-            Let’s talk about your Next.js project.
+            Let’s talk about your project.
           </h2>
           <p className="max-w-2xl text-base text-base-content/70">
-            Share the designs, the repo, or the problem you’re stuck on — and I’ll
-            suggest the fastest path to a clean solution.
+            Share the scope and I’ll suggest a plan.
           </p>
           <Link href="/contact" className="btn btn-primary btn-wide">
             Contact Me

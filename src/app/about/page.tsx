@@ -2,12 +2,12 @@ import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 
 const strengths = [
-  "Pixel-perfect UI builds from Figma",
-  "Next.js debugging + troubleshooting",
-  "Performance improvements",
-  "CMS architecture and schema-driven content",
-  "Checkout / search patterns",
-  "Clean, scalable code structure",
+  "Next.js, TypeScript, JavaScript",
+  "React, HTML, CSS, SCSS, Bootstrap",
+  "Node.js, PHP, Laravel",
+  "Oracle, MySQL, Firebase",
+  "ElasticSearch, Algolia, Stripe",
+  "Git, ButterCMS",
 ];
 
 export default function AboutPage() {
@@ -16,23 +16,19 @@ export default function AboutPage() {
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
         <PageHeader
           title="About"
-          subtitle="I’m Evan Jones — a Full Stack Web Developer with 5+ years of experience building production web apps."
+          subtitle="I’m Evan Jones — a Full Stack Web Developer with 5 years of experience."
         />
         <div className="mt-8 space-y-4 text-base text-base-content/70">
           <p>
-            I focus on Next.js + TypeScript, and I specialize in two areas that
-            teams often struggle to hire for: 1) building high-quality UIs from
-            designs, and 2) diagnosing and fixing real production issues in
-            existing Next.js apps.
+            I build and maintain web applications across front-end and back-end
+            stacks, with a focus on Next.js, TypeScript, and CMS-driven sites.
           </p>
           <p>
-            In production environments, I’ve also worked heavily on CMS
-            workflows and developer tooling — the kind of improvements that make
-            teams faster long-term (not just ‘get it working once’).
+            My recent work includes CMS tooling, checkout and search flows, and
+            internal productivity tools.
           </p>
           <p>
-            I’m comfortable working independently, integrating quickly into
-            existing teams, and taking full ownership of deliverables.
+            I’m based in Vineyard, UT and open to full-time or contract work.
           </p>
         </div>
       </section>
@@ -49,24 +45,12 @@ export default function AboutPage() {
       </section>
 
       <section className="card border border-base-300 bg-base-200/40">
-        <div className="card-body space-y-3">
-          <h2 className="text-2xl font-semibold tracking-tight">Recognition</h2>
-          <p className="text-base text-base-content/70">
-            I’ve been recognized for high ownership and consistent delivery —
-            shipping on time while also improving workflows and introducing
-            better patterns.
-          </p>
-        </div>
-      </section>
-
-      <section className="card border border-base-300 bg-base-200/40">
         <div className="card-body space-y-4">
           <h2 className="text-2xl font-semibold tracking-tight">
             Want to collaborate?
           </h2>
           <p className="text-base text-base-content/70">
-            If you need help shipping or fixing a Next.js site, I can jump in
-            quickly.
+            If you have a role or project, let’s connect.
           </p>
           <Link href="/contact" className="btn btn-primary btn-wide">
             Contact Me

@@ -10,6 +10,7 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
+const resumeHref = "/evan-jones-resume.txt";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -60,6 +61,15 @@ export default function Navbar() {
                 </li>
               );
             })}
+            <li>
+              <a
+                className="btn btn-primary btn-sm mt-2 justify-start"
+                href={resumeHref}
+                download
+              >
+                Download resume
+              </a>
+            </li>
           </ul>
         </div>
         <Link href="/" className="text-lg font-semibold tracking-tight">
@@ -88,12 +98,21 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <Link
-          href="/contact"
-          className="btn btn-primary btn-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-        >
-          Let&#39;s talk
-        </Link>
+        <div className="flex items-center gap-3">
+          <a
+            className="btn btn-outline btn-sm"
+            href={resumeHref}
+            download
+          >
+            Download resume
+          </a>
+          <Link
+            href="/contact"
+            className="btn btn-primary btn-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          >
+            Let&#39;s talk
+          </Link>
+        </div>
       </div>
     </div>
   );

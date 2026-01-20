@@ -98,7 +98,7 @@ export default function ContactPage() {
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
         <PageHeader
           title="Contact"
-          subtitle="If you have a Next.js project — whether it’s a new build from designs or debugging something urgent — I can help."
+          subtitle="Contact me about roles, contracts, or project work."
         />
         <div className="mt-8 space-y-2 text-sm text-base-content/70">
           <p>Email: evandj423@gmail.com</p>

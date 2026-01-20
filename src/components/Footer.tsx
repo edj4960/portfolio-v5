@@ -2,12 +2,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-base-300 bg-base-200/40">
+    <footer className="border-t border-base-300 bg-base-200">
       <div className="footer mx-auto w-full max-w-6xl px-6 py-12 text-base-content">
         <aside className="space-y-2">
-          <p className="text-lg font-semibold">Evan Jones — Next.js Developer</p>
+          <p className="text-lg font-semibold">
+            Evan Jones — Full Stack Web Developer
+          </p>
           <p className="text-sm uppercase tracking-[0.3em] text-base-content/60">
-            Build • Debug • Optimize
+            Next.js • TypeScript • Full stack
           </p>
         </aside>
         <nav>
@@ -21,6 +23,13 @@ export default function Footer() {
             <Link href="/services" className="link link-hover">
               Services
             </Link>
+            <a
+              className="link link-hover"
+              href="/evan-jones-resume.txt"
+              download
+            >
+              Download resume
+            </a>
             <a
               className="link link-hover"
               href="https://linkedin.com/in/evan-d-jones/"

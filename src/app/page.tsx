@@ -1,142 +1,229 @@
 import Link from "next/link";
+import Image from "next/image";
 
-const featuredWork = [
-  {
-    title: "Pixel-Perfect Build",
-    subtitle: "Design → Production Next.js Site",
-    description:
-      "A full marketing site implemented from a Figma design with accessible UI, responsive layout system, optimized images, and SEO.",
-    category: "Design Implementation",
-    href: "/work/pixel-perfect-build",
-    icon: (
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6 4h12v12H6z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 20h6" />
-      </svg>
-    ),
-  },
-  {
-    title: "Production Debugging",
-    subtitle: "Fixing Real Next.js Issues",
-    description:
-      "A structured troubleshooting project showcasing solutions for hydration mismatches, caching bugs, env issues, and performance regressions.",
-    category: "Debugging",
-    href: "/work/nextjs-debugging",
-    icon: (
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 12h16M12 4v16"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "CMS Integration",
-    subtitle: "Modular Page Builder + Preview",
-    description:
-      "CMS-driven component architecture with schema validation, preview mode, editor-friendly structure, and clean separation of client/server concerns.",
-    category: "CMS Architecture",
-    href: "/work/cms-integration",
-    icon: (
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 7h16M4 12h10M4 17h13"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Search + Checkout",
-    subtitle: "Filtering + Checkout Flow",
-    description:
-      "Production-style implementation of faceted search and a clean checkout flow built with modern patterns and maintainable code structure.",
-    category: "Business Feature",
-    href: "/work/search-checkout",
-    icon: (
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="h-4 w-4"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M7 7h10v4H7z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6 11h12l-1 9H7l-1-9z"
-        />
-      </svg>
-    ),
-  },
-];
+// const featuredWork = [
+//   {
+//     title: "Pixel-Perfect Build",
+//     subtitle: "Design → Production Next.js Site",
+//     description:
+//       "A full marketing site implemented from a Figma design with accessible UI, responsive layout system, optimized images, and SEO.",
+//     category: "Design Implementation",
+//     href: "/work/pixel-perfect-build",
+//     icon: (
+//       <svg
+//         aria-hidden="true"
+//         viewBox="0 0 24 24"
+//         className="h-4 w-4"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.5"
+//       >
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M6 4h12v12H6z"
+//         />
+//         <path strokeLinecap="round" strokeLinejoin="round" d="M9 20h6" />
+//       </svg>
+//     ),
+//   },
+//   {
+//     title: "Production Debugging",
+//     subtitle: "Fixing Real Next.js Issues",
+//     description:
+//       "A structured troubleshooting project showcasing solutions for hydration mismatches, caching bugs, env issues, and performance regressions.",
+//     category: "Debugging",
+//     href: "/work/nextjs-debugging",
+//     icon: (
+//       <svg
+//         aria-hidden="true"
+//         viewBox="0 0 24 24"
+//         className="h-4 w-4"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.5"
+//       >
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M4 12h16M12 4v16"
+//         />
+//       </svg>
+//     ),
+//   },
+//   {
+//     title: "CMS Integration",
+//     subtitle: "Modular Page Builder + Preview",
+//     description:
+//       "CMS-driven component architecture with schema validation, preview mode, editor-friendly structure, and clean separation of client/server concerns.",
+//     category: "CMS Architecture",
+//     href: "/work/cms-integration",
+//     icon: (
+//       <svg
+//         aria-hidden="true"
+//         viewBox="0 0 24 24"
+//         className="h-4 w-4"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.5"
+//       >
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M4 7h16M4 12h10M4 17h13"
+//         />
+//       </svg>
+//     ),
+//   },
+//   {
+//     title: "Search + Checkout",
+//     subtitle: "Filtering + Checkout Flow",
+//     description:
+//       "Production-style implementation of faceted search and a clean checkout flow built with modern patterns and maintainable code structure.",
+//     category: "Business Feature",
+//     href: "/work/search-checkout",
+//     icon: (
+//       <svg
+//         aria-hidden="true"
+//         viewBox="0 0 24 24"
+//         className="h-4 w-4"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.5"
+//       >
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M7 7h10v4H7z"
+//         />
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M6 11h12l-1 9H7l-1-9z"
+//         />
+//       </svg>
+//     ),
+//   },
+// ];
 
 const techStack = [
-  "Next.js (App Router)",
+  "Next.js",
   "TypeScript",
+  "JavaScript",
   "React",
   "Node.js",
-  "CMS architecture (schema-driven content)",
-  "Stripe integrations",
-  "Search: Algolia / ElasticSearch patterns",
-  "Git workflows and modern CI pipelines",
+  "PHP / Laravel",
+  "Oracle / MySQL",
+  "ElasticSearch / Algolia",
+  "Stripe",
+  "ButterCMS",
+];
+
+const coreSkills = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "SCSS",
+  "Node.js",
+  "PHP",
+  "Laravel",
+  "Oracle",
+  "MySQL",
+  "ElasticSearch",
+  "Algolia",
+  "Stripe",
+];
+
+const experience = [
+  {
+    company: "Traeger Grills",
+    location: "Salt Lake City, UT",
+    title: "Full Stack Developer II",
+    dates: "Jan 2025 - Present",
+    highlights: [
+      "Built internal tooling to jump between site components and CMS edit pages.",
+      "Led CMS schema management to reduce schema drift and deployment overhead.",
+      "Standardized env validation and client/server boundaries.",
+    ],
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Node",
+      "Amplience CMS",
+      "GitLab",
+      "Shopify",
+      "Zendesk",
+    ],
+  },
+  {
+    company: "Partner.Co",
+    location: "American Fork, UT",
+    title: "Full Stack Developer II",
+    dates: "Sep 2021 - Present",
+    highlights: [
+      "Redesigned checkout flow to improve address and payment completion.",
+      "Improved ElasticSearch integration for better accuracy and relevance.",
+      "Built a faster product selection module with lazy loading.",
+    ],
+    tech: [
+      "Next.js",
+      "Vue",
+      "JavaScript",
+      "Laravel",
+      "PHP",
+      "ElasticSearch",
+      "Oracle",
+      "MySQL",
+    ],
+  },
+  {
+    company: "Storier",
+    location: "Provo, UT",
+    title: "Full Stack Developer",
+    dates: "Apr 2021 - Sep 2021",
+    highlights: [
+      "Redesigned Storier.fm and integrated Algolia search.",
+      "Built a 3-tier subscription flow with Stripe integration.",
+      "Shipped the Storier app on schedule.",
+    ],
+    tech: ["React", "React Native", "Node.js", "Stripe", "Firebase", "Algolia"],
+  },
+  {
+    company: "BYU Campus Accommodations",
+    location: "Provo, UT",
+    title: "Full Stack Developer",
+    dates: "Apr 2019 - Apr 2021",
+    highlights: [
+      "Maintained Housing.byu.edu with bug fixes and new features.",
+      "Promoted to Lead Developer and guided system architecture.",
+    ],
+    tech: ["ASP.NET", "VB.NET", "JavaScript", "jQuery", "Oracle"],
+  },
 ];
 
 export default function Home() {
   return (
     <div className="space-y-20">
-      <section className="relative overflow-hidden rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/70 via-base-100 to-base-200/10 px-8 py-16 md:px-14 md:py-20 lg:py-24">
-        <div className="pointer-events-none absolute -right-24 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 left-10 h-40 w-40 rounded-full bg-secondary/10 blur-3xl" />
+      <section className="relative overflow-hidden rounded-3xl border border-base-300 bg-linear-to-br from-base-200/70 via-base-100 to-base-200/10 px-8 py-16 md:px-14 md:py-20 lg:py-24">
+        <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 right-50 h-60 w-60 rounded-full bg-secondary/5 blur-3xl" />
         <div className="relative flex flex-col justify-center space-y-10">
           <div className="flex flex-wrap items-center gap-3">
             <span className="badge badge-ghost text-xs uppercase tracking-[0.3em] text-base-content/60">
-              Full Stack Next.js Developer
+              Full Stack Web Developer
             </span>
           </div>
           <div className="space-y-8">
             <h1 className="text-4xl font-semibold leading-snug tracking-tight md:text-6xl">
-              I build production Next.js websites.
+              Full Stack Web Developer in Vineyard, UT.
             </h1>
             <p className="max-w-3xl text-xl leading-relaxed text-base-content/70 md:text-2xl">
-              I’m Evan, a Full Stack Web Developer specializing in Next.js
-              + TypeScript. I help teams ship faster by building pixel-perfect UI
-              from designs, fixing hard production bugs, improving performance,
-              and implementing CMS-driven architecture.
+              I’m Evan. I build and maintain web applications with Next.js,
+              TypeScript, and modern backend stacks. My recent work covers CMS
+              tooling, checkout flows, search, and internal productivity tools.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
@@ -144,104 +231,93 @@ export default function Home() {
               Let’s talk
             </Link>
             <Link href="/work" className="btn btn-outline btn-wide">
-              View work
+              View experience
             </Link>
           </div>
           <p className="text-sm text-base-content/60">
-            5+ years shipping production web apps • Next.js • TypeScript • CMS
-            workflows • Checkout/search systems
+            5 years experience • Next.js • TypeScript • CMS • Search • Checkout
           </p>
         </div>
       </section>
 
       <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">What I do</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Focus areas</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
-            Conversion-focused execution across builds, production fixes, and
-            CMS-driven systems.
+            UI delivery, production debugging, and CMS/integration work.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Build from Designs</h3>
+                <h3 className="text-xl font-semibold">UI Delivery</h3>
                 <p className="text-sm text-base-content/70">
-                  Pixel-perfect Figma → Next.js builds that ship fast.
+                  Implement designs in Next.js with clean, reusable components.
                 </p>
               </div>
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Responsive layouts that match the design across breakpoints</span>
+                  <span>Responsive layouts matched across breakpoints</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Accessible components with clean interaction states</span>
+                  <span>Accessible components and interaction states</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Reusable sections built for iteration</span>
+                  <span>Reusable sections for iterative updates</span>
                 </li>
               </ul>
-              <Link href="/services" className="link link-hover text-sm">
-                Learn more
-              </Link>
             </div>
           </div>
           <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Debug + Troubleshoot</h3>
+                <h3 className="text-xl font-semibold">Debugging + Reliability</h3>
                 <p className="text-sm text-base-content/70">
-                  Fix production issues without risky rewrites.
+                  Fix production issues without disruptive rewrites.
                 </p>
               </div>
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Hydration + client/server boundary fixes</span>
+                  <span>Hydration and client/server boundary fixes</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Caching, data consistency, and runtime issue diagnosis</span>
+                  <span>Caching, data consistency, and runtime diagnostics</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Performance improvements and bundle cleanup</span>
+                  <span>Performance tuning and bundle cleanup</span>
                 </li>
               </ul>
-              <Link href="/services" className="link link-hover text-sm">
-                Learn more
-              </Link>
             </div>
           </div>
           <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">CMS + Content Systems</h3>
+                <h3 className="text-xl font-semibold">CMS + Integrations</h3>
                 <p className="text-sm text-base-content/70">
-                  CMS-driven sites that editors actually enjoy using.
+                  CMS architecture and backend integrations.
                 </p>
               </div>
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Schema-driven sections and typed content contracts</span>
+                  <span>Schema-driven sections and typed contracts</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Preview workflows and safe defaults</span>
+                  <span>Preview workflows for editors</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Patterns that reduce production surprises</span>
+                  <span>Stripe, ElasticSearch, Algolia integrations</span>
                 </li>
               </ul>
-              <Link href="/services" className="link link-hover text-sm">
-                Learn more
-              </Link>
             </div>
           </div>
         </div>
@@ -249,53 +325,58 @@ export default function Home() {
 
       <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Featured work</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Experience</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
-            Here are a few projects that represent the kind of work I take on
-            most often — builds from designs, CMS systems, and production
-            debugging.
+            Recent roles and the work shipped.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {featuredWork.map((project) => (
-            <Link
-              key={project.title}
-              href={project.href}
-              className="group flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/40 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-base-100"
+        <div className="mt-10 grid gap-6">
+          {experience.map((role) => (
+            <div
+              key={`${role.company}-${role.title}`}
+              className="card border border-base-300 bg-base-100/70"
             >
-              <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/60">
-                <span className="inline-flex items-center gap-2">
-                  {project.icon}
-                  {project.category}
-                </span>
-              </div>
-              <div className="mt-5 space-y-3">
-                <div className="space-y-1">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="text-sm text-base-content/60">
-                    {project.subtitle}
-                  </p>
+              <div className="card-body gap-5 p-6">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="space-y-2">
+                    <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
+                      {role.company} • {role.location}
+                    </p>
+                    <h3 className="text-xl font-semibold">{role.title}</h3>
+                  </div>
+                  <span className="text-xs text-base-content/60">
+                    {role.dates}
+                  </span>
                 </div>
-                <p className="text-sm text-base-content/70">
-                  {project.description}
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-primary">
-                  View case study →
-                </span>
+                <ul className="space-y-2 text-sm text-base-content/70">
+                  {role.highlights.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-xs uppercase tracking-[0.25em] text-base-content/50">
+                  Tech
+                </div>
+                <div className="flex flex-wrap gap-2 text-sm text-base-content/70">
+                  {role.tech.map((item) => (
+                    <span key={item} className="badge badge-outline">
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
         {[
-          { top: "5+ years", bottom: "Production web apps" },
-          { top: "Next.js + TypeScript", bottom: "App Router specialist" },
-          {
-            top: "Tooling-first mindset",
-            bottom: "Workflow + reliability wins",
-          },
+          { top: "5 years", bottom: "Production web apps" },
+          { top: "Full stack", bottom: "UI + backend integrations" },
+          { top: "Next.js + TypeScript", bottom: "Primary stack" },
         ].map((item) => (
           <div
             key={item.top}
@@ -309,33 +390,21 @@ export default function Home() {
 
       <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Tech I work with</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Skills</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
-            Tools and patterns used across production builds, feature work, and
-            platform rescue projects.
+            Tools used in recent roles.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Specialties</h3>
-            <ul className="space-y-2 text-sm text-base-content/70">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                <span>App Router architecture (RSC and client boundaries)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                <span>Hydration + caching debugging</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                <span>CMS-driven layout systems + schema validation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                <span>Performance tuning (bundle, LCP, loading states)</span>
-              </li>
-            </ul>
+            <h3 className="text-xl font-semibold">Core</h3>
+            <div className="flex flex-wrap gap-3">
+              {coreSkills.map((item) => (
+                <span key={item} className="badge badge-outline px-4 py-3">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
           <div className="flex flex-wrap gap-3">
             {techStack.map((item) => (
@@ -352,11 +421,9 @@ export default function Home() {
 
       <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Recognition &amp; feedback
-          </h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Recognition</h2>
           <p className="text-sm text-base-content/60">
-            Feedback from people I’ve worked with.
+            Feedback from past collaborators.
           </p>
         </div>
         <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
@@ -405,11 +472,10 @@ export default function Home() {
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 px-8 py-12 md:px-12">
         <div className="space-y-6">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Have a Next.js site that needs shipping or fixing?
+            Need help shipping or fixing a web app?
           </h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70 md:text-lg">
-            Share your designs, the repo, or the blocker — I’ll suggest the
-            fastest path to a clean solution.
+            Share the details and I’ll outline next steps.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Link href="/contact" className="btn btn-primary btn-lg">
