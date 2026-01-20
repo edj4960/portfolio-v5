@@ -1,5 +1,7 @@
 import Link from "next/link";
+import WaveLottie from "@/components/WaveLottie";
 import Image from "next/image";
+import PageCascade from "@/components/PageCascade";
 
 // const featuredWork = [
 //   {
@@ -206,10 +208,10 @@ const experience = [
 
 export default function Home() {
   return (
-    <div className="space-y-20">
+    <PageCascade className="space-y-20">
       <section className="relative overflow-hidden rounded-3xl border border-base-300 bg-linear-to-br from-base-200/70 via-base-100 to-base-200/10 px-8 py-16 md:px-14 md:py-20 lg:py-24">
         <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 right-50 h-60 w-60 rounded-full bg-secondary/5 blur-3xl" />
+        <div className="pointer-events-none absolute top-0 right-50 h-60 w-60 rounded-full bg-secondary/5 blur-3xl" />
         <div className="relative flex flex-col justify-center space-y-10">
           <div className="flex flex-wrap items-center gap-3">
             <span className="badge badge-ghost text-xs uppercase tracking-[0.3em] text-base-content/60">
@@ -218,13 +220,23 @@ export default function Home() {
           </div>
           <div className="space-y-8">
             <h1 className="text-4xl font-semibold leading-snug tracking-tight md:text-6xl">
-              Full Stack Web Developer in Vineyard, UT.
+              I build Next.js websites.
             </h1>
-            <p className="max-w-3xl text-xl leading-relaxed text-base-content/70 md:text-2xl">
-              I’m Evan. I build and maintain web applications with Next.js,
-              TypeScript, and modern backend stacks. My recent work covers CMS
-              tooling, checkout flows, search, and internal productivity tools.
-            </p>
+            <div className="flex items-start gap-3">
+              <span className="max-w-3xl text-xl leading-relaxed text-base-content/70 md:text-2xl">
+                <WaveLottie className="mt-1 inline-flex h-8 w-8 mr-2" />
+                I’m{" "}
+                <Link
+                  href="/about"
+                  className="relative font-semibold text-primary after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary/80 hover:after:scale-x-100"
+                >
+                  Evan
+                </Link>
+                . I build and maintain web applications with Next.js, TypeScript,
+                and modern backend stacks. My recent work covers CMS tooling,
+                checkout flows, search, and internal productivity tools.
+              </span>
+            </div>
           </div>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-primary btn-wide">
@@ -487,6 +499,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </PageCascade>
   );
 }

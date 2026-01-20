@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Card from "@/components/Card";
+import PageCascade from "@/components/PageCascade";
 
 const services = [
   {
@@ -82,7 +83,7 @@ const faq = [
 
 export default function ServicesPage() {
   return (
-    <div className="space-y-20">
+    <PageCascade className="space-y-20">
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
         <PageHeader
           title="Services"
@@ -184,6 +185,6 @@ export default function ServicesPage() {
           </Link>
         </div>
       </section>
-    </div>
+    </PageCascade>
   );
 }

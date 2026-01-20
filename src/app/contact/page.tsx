@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PageHeader from "@/components/PageHeader";
+import PageCascade from "@/components/PageCascade";
 
 type FormState = {
   name: string;
@@ -86,7 +87,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="space-y-20">
+    <PageCascade className="space-y-20">
       {toastVisible && (
         <div className="toast toast-top toast-end z-50">
           <div className="alert alert-success">
@@ -200,6 +201,6 @@ export default function ContactPage() {
           </form>
         </div>
       </section>
-    </div>
+    </PageCascade>
   );
 }
