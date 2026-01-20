@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Full Stack Web Developer with 5 years of experience building web applications with Next.js, TypeScript, and modern backend stacks.",
   openGraph: {
-    title: "Evan Jones — Full Stack Web Developer",
+    title: "Evan Jones - Full Stack Web Developer",
     description:
       "Full Stack Web Developer with experience across Next.js, TypeScript, CMS tooling, search, and checkout flows.",
     type: "website",

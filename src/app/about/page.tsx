@@ -83,7 +83,7 @@ export default function AboutPage() {
                   Open to
                 </p>
                 <p className="text-sm text-base-content/80">
-                  Full-time or contract roles
+                  Part Time or Contract Roles
                 </p>
               </div>
             </div>

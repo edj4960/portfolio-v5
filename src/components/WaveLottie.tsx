@@ -6,7 +6,8 @@ import Lottie, { type LottieRefCurrentProps } from "lottie-react";
 const LOTTIE_URL =
   "https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/lottie.json";
 const START_DELAY_MS = 1200;
-const PLAY_DURATION_MS = 2020;
+const PLAY_DURATION_MS = 2005;
+const REPEAT_DELAY_MS = 7000;
 
 type WaveLottieProps = {
   className?: string;
@@ -56,17 +57,25 @@ export default function WaveLottie({ className }: WaveLottieProps) {
       return;
     }
 
-    const startTimer = window.setTimeout(() => {
+    let startTimer = window.setTimeout(() => {
       lottieRef.current?.goToAndPlay(0, true);
     }, START_DELAY_MS);
 
-    const stopTimer = window.setTimeout(() => {
+    let stopTimer = window.setTimeout(() => {
       lottieRef.current?.stop();
     }, START_DELAY_MS + PLAY_DURATION_MS);
+
+    const interval = window.setInterval(() => {
+      lottieRef.current?.goToAndPlay(0, true);
+      window.setTimeout(() => {
+        lottieRef.current?.stop();
+      }, PLAY_DURATION_MS);
+    }, REPEAT_DELAY_MS);
 
     return () => {
       window.clearTimeout(startTimer);
       window.clearTimeout(stopTimer);
+      window.clearInterval(interval);
     };
   }, [animationData]);
 
