@@ -384,7 +384,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
+      {/* <section className="grid gap-4 md:grid-cols-3">
         {[
           { top: "5 years", bottom: "Production web apps" },
           { top: "Full stack", bottom: "UI + backend integrations" },
@@ -398,7 +398,7 @@ export default function Home() {
             <p className="text-sm text-base-content/60">{item.bottom}</p>
           </div>
         ))}
-      </section>
+      </section> */}
 
       <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
