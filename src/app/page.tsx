@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-10">
+      <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">What I do</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
@@ -162,7 +162,7 @@ export default function Home() {
             CMS-driven systems.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
             <div className="card-body gap-5 p-6">
               <div className="space-y-2">
@@ -247,7 +247,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-10">
+      <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">Featured work</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
@@ -256,7 +256,7 @@ export default function Home() {
             debugging.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {featuredWork.map((project) => (
             <Link
               key={project.title}
@@ -307,7 +307,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="space-y-10">
+      <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">Tech I work with</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
@@ -315,7 +315,7 @@ export default function Home() {
             platform rescue projects.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Specialties</h3>
             <ul className="space-y-2 text-sm text-base-content/70">
@@ -350,7 +350,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="space-y-10">
+      <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">
             Recognition &amp; feedback
@@ -359,7 +359,7 @@ export default function Home() {
             Feedback from people I’ve worked with.
           </p>
         </div>
-        <div className="grid items-stretch gap-6 md:grid-cols-2">
+        <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
           <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
             <span className="absolute right-6 top-6 text-5xl text-base-content/10">
               “

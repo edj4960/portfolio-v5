@@ -16,5 +16,9 @@
   body {
     @apply bg-base-100 text-base-content antialiased;
     font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+    background-image:
+      radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 55%);
+    background-size: 22px 22px, 100% 100%;
   }
 }
