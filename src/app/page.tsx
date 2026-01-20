@@ -224,7 +224,7 @@ export default function Home() {
             </h1>
             <div className="flex items-start gap-3">
               <span className="max-w-3xl text-xl leading-relaxed text-base-content/70 md:text-2xl">
-                <WaveLottie className="mt-1 inline-flex h-8 w-8 mr-2" />
+                <WaveLottie className="inline-flex h-8 w-8 mr-2" />
                 I’m{" "}
                 <Link
                   href="/about"
