@@ -76,7 +76,11 @@ export default function ContactPage() {
       return;
     }
 
-    console.log({ ...formState });
+    const subject = encodeURIComponent("Portfolio inquiry");
+    const body = encodeURIComponent(
+      `Name: ${formState.name}\nEmail: ${formState.email}\nHelp needed: ${formState.help}\n\nDetails:\n${formState.details}`
+    );
+    window.location.href = `mailto:evandj423@gmail.com?subject=${subject}&body=${body}`;
     setFormState(initialState);
     setErrors({});
     setToastVisible(true);
@@ -102,22 +106,45 @@ export default function ContactPage() {
           subtitle="Contact me about roles, contracts, or project work."
         />
         <div className="mt-8 space-y-2 text-sm text-base-content/70">
-          <p>Email: evandj423@gmail.com</p>
-          <p>LinkedIn: linkedin.com/in/evan-d-jones/</p>
+          <p>
+            Email:{" "}
+            <a
+              className="text-primary underline decoration-primary/40 underline-offset-4 hover:text-primary/80"
+              href="mailto:evandj423@gmail.com"
+            >
+              evandj423@gmail.com
+            </a>
+          </p>
+          <p>
+            LinkedIn:{" "}
+            <a
+              className="text-primary underline decoration-primary/40 underline-offset-4 hover:text-primary/80"
+              href="https://linkedin.com/in/evan-d-jones/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              linkedin.com/in/evan-d-jones/
+            </a>
+          </p>
         </div>
       </section>
 
       <section className="card border border-base-300 bg-base-200/40">
-        <div className="card-body space-y-6">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Send a message
-          </h2>
+        <div className="card-body space-y-7">
+          <div className="space-y-2">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Send a message
+            </h2>
+            <p className="text-sm text-base-content/60">
+              This form opens your email client with the details pre-filled.
+            </p>
+          </div>
           <form className="space-y-6" onSubmit={handleSubmit} noValidate>
             <div className="grid gap-6 md:grid-cols-2">
-              <label className="form-control w-full">
-                <div className="label">
-                  <span className="label-text">Name</span>
-                </div>
+              <label className="form-control w-full gap-2">
+                <span className="label-text text-sm text-base-content/70">
+                  Name
+                </span>
                 <input
                   type="text"
                   className="input input-bordered w-full"
@@ -126,14 +153,14 @@ export default function ContactPage() {
                   required
                 />
                 {errors.name && (
-                  <span className="mt-2 text-xs text-error">{errors.name}</span>
+                  <span className="text-xs text-error">{errors.name}</span>
                 )}
               </label>
 
-              <label className="form-control w-full">
-                <div className="label">
-                  <span className="label-text">Email</span>
-                </div>
+              <label className="form-control w-full gap-2">
+                <span className="label-text text-sm text-base-content/70">
+                  Email
+                </span>
                 <input
                   type="email"
                   className="input input-bordered w-full"
@@ -142,15 +169,15 @@ export default function ContactPage() {
                   required
                 />
                 {errors.email && (
-                  <span className="mt-2 text-xs text-error">{errors.email}</span>
+                  <span className="text-xs text-error">{errors.email}</span>
                 )}
               </label>
             </div>
 
-            <label className="form-control w-full">
-              <div className="label">
-                <span className="label-text">What do you need help with?</span>
-              </div>
+            <label className="form-control w-full gap-2">
+              <span className="label-text text-sm text-base-content/70">
+                What do you need help with?
+              </span>
               <select
                 className="select select-bordered w-full"
                 value={formState.help}
@@ -167,14 +194,14 @@ export default function ContactPage() {
                 ))}
               </select>
               {errors.help && (
-                <span className="mt-2 text-xs text-error">{errors.help}</span>
+                <span className="text-xs text-error">{errors.help}</span>
               )}
             </label>
 
-            <label className="form-control w-full">
-              <div className="label">
-                <span className="label-text">Project details</span>
-              </div>
+            <label className="form-control w-full gap-2">
+              <span className="label-text text-sm text-base-content/70">
+                Project details
+              </span>
               <textarea
                 className="textarea textarea-bordered h-36 w-full"
                 value={formState.details}
@@ -184,13 +211,11 @@ export default function ContactPage() {
                 required
               />
               {errors.details && (
-                <span className="mt-2 text-xs text-error">
-                  {errors.details}
-                </span>
+                <span className="text-xs text-error">{errors.details}</span>
               )}
             </label>
 
-            <div className="space-y-2">
+            <div className="space-y-3 pt-1">
               <button className="btn btn-primary btn-wide" type="submit">
                 Send Message
               </button>
