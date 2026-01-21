@@ -67,7 +67,7 @@ const services = [
 const faq = [
   {
     question: "Are you available for small jobs?",
-    answer: "Yes — I take on small fixes as well as larger builds.",
+    answer: "Yes, I take on small fixes as well as larger builds.",
   },
   {
     question: "Can you work inside an existing repo?",

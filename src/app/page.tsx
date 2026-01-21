@@ -149,6 +149,8 @@ const experience = [
       "Built internal tooling to jump between site components and CMS edit pages.",
       "Led CMS schema management to reduce schema drift and deployment overhead.",
       "Standardized env validation and client/server boundaries.",
+      "Shipped CMS tooling that accelerated content updates across brands.",
+      "Recognized by leadership for reliable delivery and ownership.",
     ],
     tech: [
       "Next.js",
@@ -232,9 +234,10 @@ export default function Home() {
                 >
                   Evan
                 </Link>
-                . I build and maintain web applications with Next.js, TypeScript,
-                and modern backend stacks. My recent work covers CMS tooling,
-                checkout flows, search, and internal productivity tools.
+                , a Full Stack Web Developer specializing in Next.js
+                + TypeScript. I help teams ship faster by building pixel-perfect UI
+                from designs, fixing hard production bugs, improving performance,
+                and implementing CMS-driven architecture.
               </span>
             </div>
           </div>
@@ -400,7 +403,7 @@ export default function Home() {
         ))}
       </section> */}
 
-      <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
+      {/* <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">Skills</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
@@ -429,7 +432,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
         <div className="space-y-3">
@@ -440,17 +443,15 @@ export default function Home() {
         </div>
         <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
           <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
-            <span className="absolute right-6 top-6 text-5xl text-base-content/10">
-              “
-            </span>
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-base-300 bg-base-200 text-sm font-semibold">
-                FC
-              </div>
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed text-base-content/80">
-                  “We can always count on Evan to get projects done on time as
-                  well as finding new methods for working better.”
+                  “Evan is the legit Dev Ninja. He's a little quite and
+                  unassuming, then out of nowhere he'll smash you in the face
+                  with great work. He's very smart and works without complaint,
+                  even on projects that no one is excited about. We can always
+                  count on Evan to get projects done on time as well as finding
+                  new methods for working better.”
                 </p>
                 <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
                   Former collaborator
@@ -459,18 +460,14 @@ export default function Home() {
             </div>
           </div>
           <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
-            <span className="absolute right-6 top-6 text-5xl text-base-content/10">
-              “
-            </span>
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-base-300 bg-base-200 text-sm font-semibold">
-                PL
-              </div>
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed text-base-content/80">
-                  “He jumps in to every project with a positive attitude and
-                  brings good ideas to the table… approaches [difficult tasks]
-                  thoughtfully.”
+                  “Evan is exactly the sort of person you want on your team. He
+                  jumps in to every project with a positive attitude and brings
+                  good ideas to the table. He doesn't shy away from difficult
+                  tasks and approaches them thoughtfully. On top of all this, he
+                  is just fun to have around.”
                 </p>
                 <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
                   Former collaborator

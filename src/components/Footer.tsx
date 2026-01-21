@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer mx-auto w-full max-w-6xl px-6 py-12 text-base-content">
         <aside className="space-y-2">
           <p className="text-lg font-semibold">
-            Evan Jones — Full Stack Web Developer
+            Evan Jones - Full Stack Web Developer
           </p>
           <p className="text-sm uppercase tracking-[0.3em] text-base-content/60">
             Next.js • TypeScript • Full stack
