@@ -2,6 +2,7 @@ import Link from "next/link";
 import WaveLottie from "@/components/WaveLottie";
 import Image from "next/image";
 import PageCascade from "@/components/PageCascade";
+import EmojiLottie from "@/components/EmojiLottie";
 
 // const featuredWork = [
 //   {
@@ -245,7 +246,7 @@ export default function Home() {
             <Link href="/contact" className="btn btn-primary btn-wide">
               Let’s talk
             </Link>
-            <Link href="/work" className="btn btn-outline btn-wide">
+            <Link href="#experience" className="btn btn-outline btn-wide">
               View experience
             </Link>
           </div>
@@ -257,7 +258,7 @@ export default function Home() {
 
       <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Focus areas</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">What I'm good at</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
             UI delivery, production debugging, and CMS/integration work.
           </p>
@@ -338,7 +339,67 @@ export default function Home() {
         </div>
       </section>
 
+
       <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
+        <div className="space-y-3">
+
+          <div className="flex items-center gap-3">
+            <h2 className="text-3xl font-semibold tracking-tight">Recognitions</h2>
+            <EmojiLottie
+              url="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3c6/lottie.json"
+              className="h-9 w-9"
+            />
+          </div>
+          <p className="text-sm text-base-content/60">
+            Recognition from those I've worked with
+          </p>
+        </div>
+        <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
+          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/50">
+                <span>Value our Values Recognition</span>
+                <span className="badge badge-ghost text-[11px]">2025</span>
+              </div>
+              <div className="relative border-l-2 border-primary/40 pl-4">
+                <p className="text-lg leading-relaxed text-base-content/80">
+                  “Evan is the legit Dev Ninja. He's a little quite and
+                  unassuming, then out of nowhere he'll smash you in the face
+                  with great work. He's very smart and works without complaint,
+                  even on projects that no one is excited about. We can always
+                  count on Evan to get projects done on time as well as finding
+                  new methods for working better.”
+                </p>
+              </div>
+              <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
+                Traeger Grills
+              </p>
+            </div>
+          </div>
+          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/50">
+                <span>Value our Values Recognition</span>
+                <span className="badge badge-ghost text-[11px]">2025</span>
+              </div>
+              <div className="relative border-l-2 border-primary/40 pl-4">
+                <p className="text-lg leading-relaxed text-base-content/80">
+                  “Evan is exactly the sort of person you want on your team. He
+                  jumps in to every project with a positive attitude and brings
+                  good ideas to the table. He doesn't shy away from difficult
+                  tasks and approaches them thoughtfully. On top of all this, he
+                  is just fun to have around.”
+                </p>
+              </div>
+              <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
+                Traeger Grills
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">Experience</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
@@ -405,7 +466,13 @@ export default function Home() {
 
       {/* <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Skills</h2>
+          <div className="flex items-center gap-3">
+            <EmojiLottie
+              url="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6e0/lottie.json"
+              className="h-9 w-9"
+            />
+            <h2 className="text-3xl font-semibold tracking-tight">Skills</h2>
+          </div>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
             Tools used in recent roles.
           </p>
@@ -434,50 +501,6 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
-        <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Recognition</h2>
-          <p className="text-sm text-base-content/60">
-            Feedback from past collaborators.
-          </p>
-        </div>
-        <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
-          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
-            <div className="flex items-start gap-4">
-              <div className="space-y-4">
-                <p className="text-lg leading-relaxed text-base-content/80">
-                  “Evan is the legit Dev Ninja. He's a little quite and
-                  unassuming, then out of nowhere he'll smash you in the face
-                  with great work. He's very smart and works without complaint,
-                  even on projects that no one is excited about. We can always
-                  count on Evan to get projects done on time as well as finding
-                  new methods for working better.”
-                </p>
-                <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
-                  Former collaborator
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
-            <div className="flex items-start gap-4">
-              <div className="space-y-4">
-                <p className="text-lg leading-relaxed text-base-content/80">
-                  “Evan is exactly the sort of person you want on your team. He
-                  jumps in to every project with a positive attitude and brings
-                  good ideas to the table. He doesn't shy away from difficult
-                  tasks and approaches them thoughtfully. On top of all this, he
-                  is just fun to have around.”
-                </p>
-                <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
-                  Former collaborator
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 px-8 py-12 md:px-12">
         <div className="space-y-6">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
@@ -487,7 +510,7 @@ export default function Home() {
             Share the details and I’ll outline next steps.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
-            <Link href="/contact" className="btn btn-primary btn-lg">
+            <Link href="/contact" className="btn btn-primary btn-md">
               Let’s talk
             </Link>
             <Link href="/services" className="btn btn-outline btn-md">
