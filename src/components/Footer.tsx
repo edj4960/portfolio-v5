@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t border-base-300 bg-base-200">
-      <div className="footer mx-auto w-full max-w-6xl px-6 py-12 text-base-content">
+      <div className="w-full max-w-6xl px-6 py-12 mx-auto footer text-base-content">
         <aside className="space-y-2">
           <p className="text-lg font-semibold">
             Evan Jones - Full Stack Web Developer
@@ -17,9 +17,9 @@ export default function Footer() {
             Links
           </h6>
           <div className="flex flex-col gap-2 text-sm">
-            <Link href="/work" className="link link-hover">
+            {/* <Link href="/work" className="link link-hover">
               Work
-            </Link>
+            </Link> */}
             <Link href="/services" className="link link-hover">
               Services
             </Link>
