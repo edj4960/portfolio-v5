@@ -9,7 +9,8 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
-const resumeHref = "/evan-jones-resume.txt";
+const resumeHref =
+  "https://docs.google.com/document/d/1U1Tm78HXmAY6j4oYV87nZcAJr_ZDvBcTLl8Pas-hq3Y/export?format=pdf";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -64,7 +65,8 @@ export default function Navbar() {
               <a
                 className="btn btn-primary btn-sm mt-2 justify-start"
                 href={resumeHref}
-                download
+                target="_blank"
+                rel="noreferrer"
               >
                 Download resume
               </a>
@@ -101,7 +103,8 @@ export default function Navbar() {
           <a
             className="btn btn-outline btn-sm"
             href={resumeHref}
-            download
+            target="_blank"
+            rel="noreferrer"
           >
             Download resume
           </a>

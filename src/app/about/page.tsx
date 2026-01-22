@@ -30,17 +30,17 @@ export default function AboutPage() {
   return (
     <PageCascade className="space-y-16">
       <section className="relative overflow-hidden rounded-[32px] border border-base-300 bg-base-100/70 px-8 py-12 md:px-12 lg:px-14">
-        <div className="pointer-events-none absolute -top-24 right-0 h-48 w-48 rounded-full bg-primary/10 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 left-10 h-40 w-40 rounded-full bg-secondary/10 blur-3xl" />
+        <div className="absolute right-0 w-48 h-48 rounded-full pointer-events-none -top-24 bg-primary/10 blur-3xl" />
+        <div className="absolute bottom-0 w-40 h-40 rounded-full pointer-events-none left-10 bg-secondary/10 blur-3xl" />
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center">
           <div className="space-y-4">
-            <div className="mx-auto w-full max-w-sm rounded-3xl border border-base-300/80 bg-base-200/40 p-3 md:mx-0">
+            <div className="w-full max-w-sm p-3 mx-auto border rounded-3xl border-base-300/80 bg-base-200/40 md:mx-0">
               <Image
                 src="/profile.jpeg"
                 alt="Evan Jones"
                 width={700}
                 height={880}
-                className="h-auto w-full rounded-2xl object-cover"
+                className="object-cover w-full h-auto rounded-2xl"
                 priority
               />
             </div>
@@ -65,12 +65,12 @@ export default function AboutPage() {
                 CMS-driven sites.
               </p>
               <p>
-                Recent work includes CMS tooling, checkout and search flows, and
+                Recent work includes CMS tooling, checkout, and
                 internal productivity tools.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-base-300 bg-base-200/40 p-4">
+              <div className="p-4 border rounded-2xl border-base-300 bg-base-200/40">
                 <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
                   Now
                 </p>
@@ -78,12 +78,12 @@ export default function AboutPage() {
                   Full Stack Developer II
                 </p>
               </div>
-              <div className="rounded-2xl border border-base-300 bg-base-200/40 p-4">
+              <div className="p-4 border rounded-2xl border-base-300 bg-base-200/40">
                 <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
                   Open to
                 </p>
                 <p className="text-sm text-base-content/80">
-                  Part Time or Contract Roles
+                  Part Time and Contract Roles
                 </p>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-wrap gap-3">
           {strengths.map((item) => (
-            <span key={item} className="badge badge-outline px-4 py-3 text-sm">
+            <span key={item} className="px-4 py-3 text-sm badge badge-outline">
               {item}
             </span>
           ))}

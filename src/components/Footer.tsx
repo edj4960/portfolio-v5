@@ -25,8 +25,9 @@ export default function Footer() {
             </Link>
             <a
               className="link link-hover"
-              href="/evan-jones-resume.txt"
-              download
+              href="https://docs.google.com/document/d/1U1Tm78HXmAY6j4oYV87nZcAJr_ZDvBcTLl8Pas-hq3Y/export?format=pdf"
+              target="_blank"
+              rel="noreferrer"
             >
               Download resume
             </a>
