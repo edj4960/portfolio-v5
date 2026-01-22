@@ -1,6 +1,6 @@
   "use client";
 
-  import { useMemo, useState } from "react";
+  import { useState, type FormEvent } from "react";
   import PageHeader from "@/components/PageHeader";
   import PageCascade from "@/components/PageCascade";
 
@@ -18,8 +18,6 @@
     details: "",
   };
 
-  const GETFORM_ENDPOINT = "https://evandj423.getform.com/4zd1r";
-
   const helpOptions = [
     "Build from designs",
     "Debugging / troubleshooting",
@@ -30,14 +28,53 @@
 
   export default function ContactPage() {
     const [formState, setFormState] = useState<FormState>(initialState);
-
-    const composedMessage = useMemo(
-      () => `Help needed: ${formState.help}\n\n${formState.details}`,
-      [formState.details, formState.help]
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
+      "idle"
     );
+    const [statusMessage, setStatusMessage] = useState("");
 
     const handleChange = (field: keyof FormState, value: string) => {
       setFormState((prev) => ({ ...prev, [field]: value }));
+    };
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      setStatus("loading");
+      setStatusMessage("");
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formState.name,
+            email: formState.email,
+            help: formState.help,
+            details: formState.details,
+          }),
+        });
+
+        const payload = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(
+            payload?.error || "Something went wrong sending your message."
+          );
+        }
+
+        setStatus("success");
+        setStatusMessage("Thanks! Your message is on its way.");
+        setFormState(initialState);
+      } catch (error) {
+        const message =
+          error instanceof Error
+            ? error.message
+            : "Something went wrong sending your message.";
+        setStatus("error");
+        setStatusMessage(message);
+      }
     };
 
     return (
@@ -78,89 +115,103 @@
                 Send a message
               </h2>
               <p className="text-sm text-base-content/60">
-                This form opens your email client with the details pre-filled.
+                This form sends your message directly to my inbox.
               </p>
             </div>
-            <form
-              className="space-y-6"
-              action={GETFORM_ENDPOINT}
-              method="POST"
-            >
-              <div className="grid gap-6 md:grid-cols-2">
-                <label className="form-control w-full gap-2">
-                  <span className="label-text text-sm text-base-content/70">
-                    Name
-                  </span>
-                  <input
-                    type="text"
-                    className="input input-bordered w-full"
-                    value={formState.name}
-                    onChange={(event) => handleChange("name", event.target.value)}
-                    name="name"
-                    required
-                  />
-                </label>
-
-                <label className="form-control w-full gap-2">
-                  <span className="label-text text-sm text-base-content/70">
-                    Email
-                  </span>
-                  <input
-                    type="email"
-                    className="input input-bordered w-full"
-                    value={formState.email}
-                    onChange={(event) => handleChange("email", event.target.value)}
-                    name="email"
-                    required
-                  />
-                </label>
-              </div>
-
-              <label className="form-control w-full gap-2">
-                <span className="label-text text-sm text-base-content/70">
-                  What do you need help with?
-                </span>
-                <select
-                  className="select select-bordered w-full"
-                  value={formState.help}
-                  onChange={(event) => handleChange("help", event.target.value)}
-                  required
-                >
-                  <option value="" disabled>
-                    Select one
-                  </option>
-                  {helpOptions.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </label>
-
-              <label className="form-control w-full gap-2">
-                <span className="label-text text-sm text-base-content/70">
-                  Project details
-                </span>
-                <textarea
-                  className="textarea textarea-bordered h-36 w-full"
-                  value={formState.details}
-                  onChange={(event) =>
-                    handleChange("details", event.target.value)
-                  }
-                  required
-                />
-              </label>
-              <input type="hidden" name="message" value={composedMessage} />
-
-              <div className="space-y-3 pt-1">
-                <button className="btn btn-primary btn-wide" type="submit">
-                  Send Message
-                </button>
-                <p className="text-xs text-base-content/60">
+            {status === "success" ? (
+              <div className="rounded-2xl border border-success/30 bg-success/10 p-6 text-success">
+                <p className="text-lg font-semibold">{statusMessage}</p>
+                <p className="mt-2 text-sm text-success/80">
                   I usually respond within 1–2 business days.
                 </p>
               </div>
-            </form>
+            ) : (
+              <form
+                className="flex flex-col gap-6"
+                onSubmit={handleSubmit}
+              >
+                <div className="grid gap-6 md:grid-cols-2">
+                  <label className="form-control w-full flex flex-col gap-1">
+                    <span className="label-text text-sm text-base-content/70">
+                      Name
+                    </span>
+                    <input
+                      type="text"
+                      className="input input-bordered w-full"
+                      value={formState.name}
+                      onChange={(event) => handleChange("name", event.target.value)}
+                      name="name"
+                      required
+                    />
+                  </label>
+
+                  <label className="form-control w-full flex flex-col gap-1">
+                    <span className="label-text text-sm text-base-content/70">
+                      Email
+                    </span>
+                    <input
+                      type="email"
+                      className="input input-bordered w-full"
+                      value={formState.email}
+                      onChange={(event) => handleChange("email", event.target.value)}
+                      name="email"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <label className="form-control w-full flex flex-col gap-1">
+                  <span className="label-text text-sm text-base-content/70">
+                    What do you need help with?
+                  </span>
+                  <select
+                    className="select select-bordered w-full"
+                    value={formState.help}
+                    onChange={(event) => handleChange("help", event.target.value)}
+                    required
+                  >
+                    <option value="" disabled>
+                      Select one
+                    </option>
+                    {helpOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+
+                <label className="form-control w-full flex flex-col gap-1">
+                  <span className="label-text text-sm text-base-content/70">
+                    Project details
+                  </span>
+                  <textarea
+                    className="textarea textarea-bordered h-36 w-full"
+                    value={formState.details}
+                    onChange={(event) =>
+                      handleChange("details", event.target.value)
+                    }
+                    name="details"
+                    required
+                  />
+                </label>
+                <div className="space-y-3 pt-1">
+                  <button
+                    className="btn btn-primary btn-wide"
+                    type="submit"
+                    disabled={status === "loading"}
+                  >
+                    {status === "loading" ? "Sending..." : "Send Message"}
+                  </button>
+                  {status === "error" && (
+                    <p className="text-xs text-error">{statusMessage}</p>
+                  )}
+                  <p className="text-xs text-base-content/60">
+                    I usually respond within 1–2 business days.
+                  </p>
+                </div>
+              </form>
+            )}
           </div>
         </section>
       </PageCascade>
