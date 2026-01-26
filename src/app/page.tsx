@@ -16,7 +16,7 @@ import EmojiLottie from "@/components/EmojiLottie";
 //       <svg
 //         aria-hidden="true"
 //         viewBox="0 0 24 24"
-//         className="h-4 w-4"
+//         className="w-4 h-4"
 //         fill="none"
 //         stroke="currentColor"
 //         strokeWidth="1.5"
@@ -41,7 +41,7 @@ import EmojiLottie from "@/components/EmojiLottie";
 //       <svg
 //         aria-hidden="true"
 //         viewBox="0 0 24 24"
-//         className="h-4 w-4"
+//         className="w-4 h-4"
 //         fill="none"
 //         stroke="currentColor"
 //         strokeWidth="1.5"
@@ -65,7 +65,7 @@ import EmojiLottie from "@/components/EmojiLottie";
 //       <svg
 //         aria-hidden="true"
 //         viewBox="0 0 24 24"
-//         className="h-4 w-4"
+//         className="w-4 h-4"
 //         fill="none"
 //         stroke="currentColor"
 //         strokeWidth="1.5"
@@ -89,7 +89,7 @@ import EmojiLottie from "@/components/EmojiLottie";
 //       <svg
 //         aria-hidden="true"
 //         viewBox="0 0 24 24"
-//         className="h-4 w-4"
+//         className="w-4 h-4"
 //         fill="none"
 //         stroke="currentColor"
 //         strokeWidth="1.5"
@@ -212,9 +212,9 @@ const experience = [
 export default function Home() {
   return (
     <PageCascade className="space-y-20">
-      <section className="relative overflow-hidden rounded-3xl border border-base-300 bg-linear-to-br from-base-200/70 via-base-100 to-base-200/10 px-8 py-16 md:px-14 md:py-20 lg:py-24">
-        <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-        <div className="pointer-events-none absolute top-0 right-50 h-60 w-60 rounded-full bg-secondary/5 blur-3xl" />
+      <section className="relative px-8 py-16 overflow-hidden border rounded-3xl border-base-300 bg-linear-to-br from-base-200/70 via-base-100 to-base-200/10 md:px-14 md:py-20 lg:py-24">
+        <div className="absolute w-64 h-64 rounded-full pointer-events-none -left-24 top-10 bg-primary/10 blur-3xl" />
+        <div className="absolute top-0 rounded-full pointer-events-none right-50 h-60 w-60 bg-secondary/5 blur-3xl" />
         <div className="relative flex flex-col justify-center space-y-10">
           <div className="flex flex-wrap items-center gap-3">
             <span className="badge badge-ghost text-xs uppercase tracking-[0.3em] text-base-content/60">
@@ -227,11 +227,11 @@ export default function Home() {
             </h1>
             <div className="flex items-start gap-3">
               <span className="max-w-3xl text-xl leading-relaxed text-base-content/70 md:text-2xl">
-                <WaveLottie className="inline-flex h-8 w-8 mr-2" />
+                <WaveLottie className="inline-flex w-8 h-8 mr-2" />
                 I’m{" "}
                 <Link
                   href="/about"
-                  className="relative font-semibold text-primary after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary/80 hover:after:scale-x-100"
+                  className="font-semibold animated-link text-primary hover:text-primary/80"
                 >
                   Evan
                 </Link>
@@ -256,82 +256,106 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
-        <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">What I'm good at</h2>
-          <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
-            UI delivery, production debugging, and CMS/integration work.
+      <section className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-100/60 md:px-12">
+        <div className="space-y-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
+            What I provide
           </p>
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+                I ship UI, fix bugs, and modernize sites with CMS.
+              </h2>
+              <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
+                Clear outcomes, fast delivery, fewer surprises.
+              </p>
+            </div>
+            <Link
+              href="/services"
+              className="text-sm font-medium animated-link text-primary hover:text-primary/80"
+            >
+              View all services →
+            </Link>
+          </div>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
-            <div className="card-body gap-5 p-6">
+        <div className="grid gap-6 mt-10 md:grid-cols-3">
+          <div className="group rounded-3xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/60 hover:shadow-lg">
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+                <span className="badge badge-ghost text-[11px]">UI delivery</span>
+                <span className="badge badge-ghost text-[11px]">Next.js</span>
+              </div>
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">UI Delivery</h3>
+                <h3 className="text-xl font-semibold">Ship the UI</h3>
                 <p className="text-sm text-base-content/70">
-                  Implement designs in Next.js with clean, reusable components.
+                  You bring the designs. I build the UI.
                 </p>
+              </div>
+              <div className="text-xs uppercase tracking-[0.25em] text-base-content/50">
+                Outcome
               </div>
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Responsive layouts matched across breakpoints</span>
+                  <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+                  <span>Responsive, accessible, consistent UI</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Accessible components and interaction states</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Reusable sections for iterative updates</span>
+                  <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+                  <span>Components built for iteration</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
-            <div className="card-body gap-5 p-6">
+          <div className="group rounded-3xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/60 hover:shadow-lg">
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+                <span className="badge badge-ghost text-[11px]">Debugging</span>
+                <span className="badge badge-ghost text-[11px]">Reliability</span>
+              </div>
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Debugging + Reliability</h3>
+                <h3 className="text-xl font-semibold">Fix the bugs</h3>
                 <p className="text-sm text-base-content/70">
-                  Fix production issues without disruptive rewrites.
+                  I'll find the issue and fix it fast.
                 </p>
+              </div>
+              <div className="text-xs uppercase tracking-[0.25em] text-base-content/50">
+                Outcome
               </div>
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Hydration and client/server boundary fixes</span>
+                  <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+                  <span>Hydration and boundary fixes</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Caching, data consistency, and runtime diagnostics</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Performance tuning and bundle cleanup</span>
+                  <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+                  <span>Stability and performance improvements</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="card border border-base-300 bg-base-200/40 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/50 hover:shadow-lg">
-            <div className="card-body gap-5 p-6">
+          <div className="group rounded-3xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/60 hover:shadow-lg">
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+                <span className="badge badge-ghost text-[11px]">CMS</span>
+                <span className="badge badge-ghost text-[11px]">Integrations</span>
+              </div>
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">CMS + Integrations</h3>
+                <h3 className="text-xl font-semibold">Modernize with CMS</h3>
                 <p className="text-sm text-base-content/70">
-                  CMS architecture and backend integrations.
+                  Editors move fast without breaking pages.
                 </p>
+              </div>
+              <div className="text-xs uppercase tracking-[0.25em] text-base-content/50">
+                Outcome
               </div>
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Schema-driven sections and typed contracts</span>
+                  <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+                  <span>Schema-driven, typed content</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Preview workflows for editors</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
-                  <span>Stripe, ElasticSearch, Algolia integrations</span>
+                  <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+                  <span>Preview workflows and clean integrations</span>
                 </li>
               </ul>
             </div>
@@ -340,7 +364,7 @@ export default function Home() {
       </section>
 
 
-      <section className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
+      <section className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-200/30 md:px-12">
         <div className="space-y-3">
 
           <div className="flex items-center gap-3">
@@ -351,17 +375,17 @@ export default function Home() {
             />
           </div>
           <p className="text-sm text-base-content/60">
-            Recognition from those I've worked with
+            What people say about me
           </p>
         </div>
-        <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
-          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
+        <div className="grid items-stretch gap-6 mt-10 md:grid-cols-2">
+          <div className="relative flex flex-col h-full p-6 border rounded-2xl border-base-300 bg-base-100">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/50">
                 <span>Value our Values Recognition</span>
                 <span className="badge badge-ghost text-[11px]">2025</span>
               </div>
-              <div className="relative border-l-2 border-primary/40 pl-4">
+              <div className="relative pl-4 border-l-2 border-primary/40">
                 <p className="text-lg leading-relaxed text-base-content/80">
                   “Evan is the legit Dev Ninja. He's a little quite and
                   unassuming, then out of nowhere he'll smash you in the face
@@ -371,18 +395,15 @@ export default function Home() {
                   new methods for working better.”
                 </p>
               </div>
-              <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
-                Traeger Grills
-              </p>
             </div>
           </div>
-          <div className="relative flex h-full flex-col rounded-2xl border border-base-300 bg-base-100 p-6">
+          <div className="relative flex flex-col h-full p-6 border rounded-2xl border-base-300 bg-base-100">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/50">
                 <span>Value our Values Recognition</span>
                 <span className="badge badge-ghost text-[11px]">2025</span>
               </div>
-              <div className="relative border-l-2 border-primary/40 pl-4">
+              <div className="relative pl-4 border-l-2 border-primary/40">
                 <p className="text-lg leading-relaxed text-base-content/80">
                   “Evan is exactly the sort of person you want on your team. He
                   jumps in to every project with a positive attitude and brings
@@ -391,28 +412,25 @@ export default function Home() {
                   is just fun to have around.”
                 </p>
               </div>
-              <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
-                Traeger Grills
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="experience" className="rounded-3xl border border-base-300/80 bg-base-200/30 px-8 py-12 md:px-12">
+      <section id="experience" className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-200/30 md:px-12">
         <div className="space-y-3">
           <h2 className="text-3xl font-semibold tracking-tight">Experience</h2>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
             Recent roles and the work shipped.
           </p>
         </div>
-        <div className="mt-10 grid gap-6">
+        <div className="grid gap-6 mt-10">
           {experience.map((role) => (
             <div
               key={`${role.company}-${role.title}`}
-              className="card border border-base-300 bg-base-100/70"
+              className="border card border-base-300 bg-base-100/70"
             >
-              <div className="card-body gap-5 p-6">
+              <div className="gap-5 p-6 card-body">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="space-y-2">
                     <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
@@ -427,7 +445,7 @@ export default function Home() {
                 <ul className="space-y-2 text-sm text-base-content/70">
                   {role.highlights.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" />
+                      <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -456,7 +474,7 @@ export default function Home() {
         ].map((item) => (
           <div
             key={item.top}
-            className="rounded-2xl border border-base-300 bg-base-100/60 p-5 transition duration-200 hover:bg-base-200/50"
+            className="p-5 transition duration-200 border rounded-2xl border-base-300 bg-base-100/60 hover:bg-base-200/50"
           >
             <p className="text-lg font-semibold">{item.top}</p>
             <p className="text-sm text-base-content/60">{item.bottom}</p>
@@ -464,7 +482,7 @@ export default function Home() {
         ))}
       </section> */}
 
-      {/* <section className="rounded-3xl border border-base-300/80 bg-base-100/60 px-8 py-12 md:px-12">
+      {/* <section className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-100/60 md:px-12">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <EmojiLottie
@@ -477,12 +495,12 @@ export default function Home() {
             Tools used in recent roles.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 mt-10 md:grid-cols-2">
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Core</h3>
             <div className="flex flex-wrap gap-3">
               {coreSkills.map((item) => (
-                <span key={item} className="badge badge-outline px-4 py-3">
+                <span key={item} className="px-4 py-3 badge badge-outline">
                   {item}
                 </span>
               ))}
@@ -492,7 +510,7 @@ export default function Home() {
             {techStack.map((item) => (
               <span
                 key={item}
-                className="badge badge-outline px-4 py-3 transition duration-200 hover:border-base-200 hover:bg-base-200/50"
+                className="px-4 py-3 transition duration-200 badge badge-outline hover:border-base-200 hover:bg-base-200/50"
               >
                 {item}
               </span>
@@ -501,7 +519,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 px-8 py-12 md:px-12">
+      <section className="px-8 py-12 border rounded-3xl border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 md:px-12">
         <div className="space-y-6">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
             Need help shipping or fixing a web app?

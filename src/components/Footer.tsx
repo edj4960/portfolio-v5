@@ -17,14 +17,14 @@ export default function Footer() {
             Links
           </h6>
           <div className="flex flex-col gap-2 text-sm">
-            {/* <Link href="/work" className="link link-hover">
+            {/* <Link href="/work" className="animated-link">
               Work
             </Link> */}
-            <Link href="/services" className="link link-hover">
+            <Link href="/services" className="animated-link">
               Services
             </Link>
             <a
-              className="link link-hover"
+              className="animated-link"
               href="https://docs.google.com/document/d/1U1Tm78HXmAY6j4oYV87nZcAJr_ZDvBcTLl8Pas-hq3Y/export?format=pdf"
               target="_blank"
               rel="noreferrer"
@@ -32,14 +32,14 @@ export default function Footer() {
               Download resume
             </a>
             <a
-              className="link link-hover"
+              className="animated-link"
               href="https://linkedin.com/in/evan-d-jones/"
               target="_blank"
               rel="noreferrer"
             >
               LinkedIn
             </a>
-            <a className="link link-hover" href="mailto:evandj423@gmail.com">
+            <a className="animated-link" href="mailto:evandj423@gmail.com">
               Email
             </a>
           </div>

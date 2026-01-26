@@ -87,23 +87,23 @@
           <div className="mt-8 space-y-2 text-sm text-base-content/70">
             <p>
               Email:{" "}
-              <a
-                className="text-primary underline decoration-primary/40 underline-offset-4 hover:text-primary/80"
-                href="mailto:evandj423@gmail.com"
-              >
-                evandj423@gmail.com
-              </a>
+            <a
+              className="animated-link text-primary hover:text-primary/80"
+              href="mailto:evandj423@gmail.com"
+            >
+              evandj423@gmail.com
+            </a>
             </p>
             <p>
               LinkedIn:{" "}
-              <a
-                className="text-primary underline decoration-primary/40 underline-offset-4 hover:text-primary/80"
-                href="https://linkedin.com/in/evan-d-jones/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                linkedin.com/in/evan-d-jones/
-              </a>
+            <a
+              className="animated-link text-primary hover:text-primary/80"
+              href="https://linkedin.com/in/evan-d-jones/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              linkedin.com/in/evan-d-jones/
+            </a>
             </p>
           </div>
         </section>
