@@ -146,6 +146,8 @@ const experience = [
     location: "Salt Lake City, UT",
     title: "Full Stack Developer II",
     dates: "Jan 2025 - Present",
+    gist:
+      "Owned CMS tooling and schema governance for multi-brand sites, reducing publishing friction while improving content accuracy and release speed.",
     highlights: [
       "Built internal tooling to jump between site components and CMS edit pages.",
       "Led CMS schema management to reduce schema drift and deployment overhead.",
@@ -168,6 +170,8 @@ const experience = [
     location: "American Fork, UT",
     title: "Full Stack Developer II",
     dates: "Sep 2021 - Present",
+    gist:
+      "Focused on ecommerce UX by redesigning checkout, improving search relevance, and accelerating product browsing for higher conversion.",
     highlights: [
       "Redesigned checkout flow to improve address and payment completion.",
       "Improved ElasticSearch integration for better accuracy and relevance.",
@@ -189,6 +193,8 @@ const experience = [
     location: "Provo, UT",
     title: "Full Stack Developer",
     dates: "Apr 2021 - Sep 2021",
+    gist:
+      "Led a site redesign, shipped a multi-tier subscription flow, and integrated high-quality search to improve discovery and retention.",
     highlights: [
       "Redesigned Storier.fm and integrated Algolia search.",
       "Built a 3-tier subscription flow with Stripe integration.",
@@ -201,6 +207,8 @@ const experience = [
     location: "Provo, UT",
     title: "Full Stack Developer",
     dates: "Apr 2019 - Apr 2021",
+    gist:
+      "Maintained and extended a high-traffic housing platform while leading architecture decisions and mentoring on long-term system health.",
     highlights: [
       "Maintained Housing.byu.edu with bug fixes and new features.",
       "Promoted to Lead Developer and guided system architecture.",
@@ -281,10 +289,10 @@ export default function Home() {
         <div className="grid gap-6 mt-10 md:grid-cols-3">
           <div className="group rounded-3xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/60 hover:shadow-lg">
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+              {/* <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
                 <span className="badge badge-ghost text-[11px]">UI delivery</span>
                 <span className="badge badge-ghost text-[11px]">Next.js</span>
-              </div>
+              </div> */}
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Ship the UI</h3>
                 <p className="text-sm text-base-content/70">
@@ -308,10 +316,10 @@ export default function Home() {
           </div>
           <div className="group rounded-3xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/60 hover:shadow-lg">
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+              {/* <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
                 <span className="badge badge-ghost text-[11px]">Debugging</span>
                 <span className="badge badge-ghost text-[11px]">Reliability</span>
-              </div>
+              </div> */}
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Fix the bugs</h3>
                 <p className="text-sm text-base-content/70">
@@ -335,14 +343,14 @@ export default function Home() {
           </div>
           <div className="group rounded-3xl border border-base-300 bg-base-200/40 p-6 transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-base-200/60 hover:shadow-lg">
             <div className="space-y-4">
-              <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+              {/* <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
                 <span className="badge badge-ghost text-[11px]">CMS</span>
                 <span className="badge badge-ghost text-[11px]">Integrations</span>
-              </div>
+              </div> */}
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold">Modernize with CMS</h3>
                 <p className="text-sm text-base-content/70">
-                  Editors move fast without breaking pages.
+                  Migrate a static site to CMS
                 </p>
               </div>
               <div className="text-xs uppercase tracking-[0.25em] text-base-content/50">
@@ -424,13 +432,14 @@ export default function Home() {
             Recent roles and the work shipped.
           </p>
         </div>
-        <div className="grid gap-6 mt-10">
+        <div className="grid gap-4 mt-10">
           {experience.map((role) => (
             <div
               key={`${role.company}-${role.title}`}
-              className="border card border-base-300 bg-base-100/70"
+              className="collapse collapse-arrow border border-base-300 bg-base-100/70"
             >
-              <div className="gap-5 p-6 card-body">
+              <input type="checkbox" />
+              <div className="collapse-title">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="space-y-2">
                     <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
@@ -442,6 +451,11 @@ export default function Home() {
                     {role.dates}
                   </span>
                 </div>
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <p className="text-sm text-base-content/70">{role.gist}</p>
+                </div>
+              </div>
+              <div className="collapse-content space-y-5 pt-2">
                 <ul className="space-y-2 text-sm text-base-content/70">
                   {role.highlights.map((item) => (
                     <li key={item} className="flex items-start gap-2">
