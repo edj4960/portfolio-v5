@@ -68,18 +68,24 @@ const services = [
 
 const faq = [
   {
-    question: "Are you available for small jobs?",
-    answer: "Yes, I take on small fixes as well as larger builds.",
+    question: "What does a typical engagement look like?",
+    answer:
+      "Most work starts with a short discovery call, then I propose a clear scope, timeline, and deliverables before we start.",
   },
   {
-    question: "Can you work inside an existing repo?",
+    question: "Do you work hourly or fixed scope?",
     answer:
-      "Yes. I’m comfortable joining existing workflows and shipping PRs cleanly.",
+      "Both. Audits and rescue work are typically scoped quickly; builds can be fixed scope or monthly retainers depending on size.",
   },
   {
-    question: "Do you do UI only, or full stack too?",
+    question: "How soon can you start?",
     answer:
-      "Both. I’m full stack and can handle integrations and backend work, but I specialize in Next.js front-end architecture and production debugging.",
+      "If I have availability, I can usually start within 1–2 weeks. I’ll confirm timing after a quick call.",
+  },
+  {
+    question: "Can you jump into an existing codebase?",
+    answer:
+      "Yes. I work inside established repos, follow your workflows, and ship clean PRs with clear notes.",
   },
 ];
 
