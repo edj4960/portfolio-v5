@@ -7,6 +7,7 @@ const services = [
   {
     title: "Design → Next.js Build",
     bestFor: "marketing sites, landing pages, ecommerce front-ends, UI rebuilds",
+    whatYouGetLabel: "What you get",
     whatYouGet: [
       "Pixel-perfect implementation from design files",
       "Responsive layouts and reusable components",
@@ -23,13 +24,12 @@ const services = [
   {
     title: "Next.js Troubleshooting / Rescue",
     bestFor: "broken builds, urgent bugs, weird production behavior",
+    whatYouGetLabel: "What I handle",
     whatYouGet: [
       "Hydration mismatches",
-      "Server/client mistakes",
       "Broken builds",
       "Caching issues + stale content",
       "Performance bottlenecks and bundle bloat",
-      "Env misconfigurations and runtime errors",
     ],
     deliverables: [
       "Fix PR(s)",
@@ -41,6 +41,7 @@ const services = [
   {
     title: "CMS Architecture + Content Systems",
     bestFor: "teams building editable websites without chaos",
+    whatYouGetLabel: "What you get",
     whatYouGet: [
       "Schema-driven component architecture",
       "CMS integrations and page builder setup",
@@ -54,6 +55,7 @@ const services = [
   {
     title: "Next.js Performance + SEO Audit",
     bestFor: "sites that load too slowly or don’t rank well",
+    whatYouGetLabel: "What you get",
     whatYouGet: [
       "Performance bottleneck analysis",
       "Bundle + dependency review",
@@ -85,10 +87,18 @@ export default function ServicesPage() {
   return (
     <PageCascade className="space-y-20">
       <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
-        <PageHeader
-          title="Services"
-          subtitle="Full stack web development, debugging, and CMS work."
-        />
+        <div className="space-y-6">
+          <div className="flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-base-content/50">
+            <span className="badge badge-ghost text-[11px]">Next.js</span>
+            <span className="badge badge-ghost text-[11px]">UI Delivery</span>
+            <span className="badge badge-ghost text-[11px]">Rescue Work</span>
+            <span className="badge badge-ghost text-[11px]">CMS</span>
+          </div>
+          <PageHeader
+            title="Services"
+            subtitle="Focused engagements to ship UI, fix production issues, and modernize content systems."
+          />
+        </div>
       </section>
 
       <section className="space-y-10">
@@ -111,9 +121,9 @@ export default function ServicesPage() {
                   <p>{service.bestFor}</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-xs uppercase tracking-[0.25em] text-base-content/50">
-                    What you get
-                  </p>
+                    <p className="text-xs uppercase tracking-[0.25em] text-base-content/50">
+                      {service.whatYouGetLabel}
+                    </p>
                   <ul className="space-y-2">
                     {service.whatYouGet.map((item) => (
                       <li key={item} className="flex items-start gap-2">
