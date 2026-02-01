@@ -244,9 +244,8 @@ export default function Home() {
                   Evan
                 </Link>
                 , a Full Stack Web Developer specializing in Next.js
-                + TypeScript. I help teams ship faster by building pixel-perfect UI
-                from designs, fixing hard production bugs, improving performance,
-                and implementing CMS-driven architecture.
+                + TypeScript. I turn designs into clean UI, chase down
+                bugs, and implementing CMS-driven architecture.
               </span>
             </div>
           </div>
@@ -266,16 +265,14 @@ export default function Home() {
 
       <section className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-100/60 md:px-12">
         <div className="space-y-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
-            What I provide
-          </p>
+          <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">What I do</p>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="space-y-2">
               <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-                I ship UI, fix bugs, and modernize sites with CMS.
+                I ship UI, squash bugs, and modernize.
               </h2>
               <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
-                Clear outcomes, fast delivery, fewer surprises.
+                Clear work, fast turnaround, no drama.
               </p>
             </div>
             <Link
@@ -294,7 +291,7 @@ export default function Home() {
                 <span className="badge badge-ghost text-[11px]">Next.js</span>
               </div> */}
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Ship the UI</h3>
+                <h3 className="text-xl font-semibold">Build the UI</h3>
                 <p className="text-sm text-base-content/70">
                   You bring the designs. I build the UI.
                 </p>
@@ -321,9 +318,9 @@ export default function Home() {
                 <span className="badge badge-ghost text-[11px]">Reliability</span>
               </div> */}
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Fix the bugs</h3>
+                <h3 className="text-xl font-semibold">Kill the bugs</h3>
                 <p className="text-sm text-base-content/70">
-                  I'll find the issue and fix it fast.
+                  I’ll find it and fix it.
                 </p>
               </div>
               <div className="text-xs uppercase tracking-[0.25em] text-base-content/50">
@@ -332,11 +329,11 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-base-content/70">
                 <li className="flex items-start gap-2">
                   <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
-                  <span>Hydration and boundary fixes</span>
+                  <span>Hydration + client/server fixes</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
-                  <span>Stability and performance improvements</span>
+                  <span>Stability + performance tune-ups</span>
                 </li>
               </ul>
             </div>
@@ -375,6 +372,9 @@ export default function Home() {
       <section className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-200/30 md:px-12">
         <div className="space-y-3">
 
+          <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
+            What people say about me
+          </p>
           <div className="flex items-center gap-3">
             <h2 className="text-3xl font-semibold tracking-tight">Recognitions</h2>
             <EmojiLottie
@@ -382,20 +382,17 @@ export default function Home() {
               className="h-9 w-9"
             />
           </div>
-          <p className="text-sm text-base-content/60">
-            What people say about me
-          </p>
         </div>
         <div className="grid items-stretch gap-6 mt-10 md:grid-cols-2">
           <div className="relative flex flex-col h-full p-6 border rounded-2xl border-base-300 bg-base-100">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/50">
-                <span>Value our Values Recognition</span>
+                <span>Coworker Recognition</span>
                 <span className="badge badge-ghost text-[11px]">2025</span>
               </div>
               <div className="relative pl-4 border-l-2 border-primary/40">
                 <p className="text-lg leading-relaxed text-base-content/80">
-                  “Evan is the legit Dev Ninja. He's a little quite and
+                  “Evan is the legit Dev Ninja. He's a little quiet and
                   unassuming, then out of nowhere he'll smash you in the face
                   with great work. He's very smart and works without complaint,
                   even on projects that no one is excited about. We can always
@@ -408,7 +405,7 @@ export default function Home() {
           <div className="relative flex flex-col h-full p-6 border rounded-2xl border-base-300 bg-base-100">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-base-content/50">
-                <span>Value our Values Recognition</span>
+                <span>Coworker Recognition</span>
                 <span className="badge badge-ghost text-[11px]">2025</span>
               </div>
               <div className="relative pl-4 border-l-2 border-primary/40">
@@ -427,16 +424,22 @@ export default function Home() {
 
       <section id="experience" className="px-8 py-12 border rounded-3xl border-base-300/80 bg-base-200/30 md:px-12">
         <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Experience</h2>
+          <div className="flex items-center gap-3">
+            <h2 className="text-3xl font-semibold tracking-tight">Experience</h2>
+            <EmojiLottie
+              url="https://fonts.gstatic.com/s/e/notoemoji/latest/2728/lottie.json"
+              className="h-9 w-9"
+            />
+          </div>
           <p className="max-w-2xl text-base leading-relaxed text-base-content/70">
-            Recent roles and the work shipped.
+            Recent roles and what I delivered.
           </p>
         </div>
         <div className="grid gap-4 mt-10">
           {experience.map((role) => (
             <div
               key={`${role.company}-${role.title}`}
-              className="collapse collapse-arrow border border-base-300 bg-base-100/70"
+              className="border collapse collapse-arrow border-base-300 bg-base-100/70"
             >
               <input type="checkbox" />
               <div className="collapse-title">
@@ -451,11 +454,11 @@ export default function Home() {
                     {role.dates}
                   </span>
                 </div>
-                <div className="mt-3 flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3 mt-3">
                   <p className="text-sm text-base-content/70">{role.gist}</p>
                 </div>
               </div>
-              <div className="collapse-content space-y-5 pt-2">
+              <div className="pt-2 space-y-5 collapse-content">
                 <ul className="space-y-2 text-sm text-base-content/70">
                   {role.highlights.map((item) => (
                     <li key={item} className="flex items-start gap-2">

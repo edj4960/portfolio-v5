@@ -79,10 +79,10 @@
 
     return (
       <PageCascade className="space-y-20">
-        <section className="rounded-3xl border border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 p-10 md:p-14">
+        <section className="p-10 border rounded-3xl border-base-300 bg-gradient-to-br from-base-200/60 via-base-100 to-base-200/10 md:p-14">
           <PageHeader
             title="Contact"
-            subtitle="Contact me about roles, contracts, or project work."
+            subtitle="Reach out about roles, contracts, or projects."
           />
           <div className="mt-8 space-y-2 text-sm text-base-content/70">
             <p>
@@ -108,21 +108,18 @@
           </div>
         </section>
 
-        <section className="card border border-base-300 bg-base-200/40">
+        <section className="border card border-base-300 bg-base-200/40">
           <div className="card-body space-y-7">
             <div className="space-y-2">
               <h2 className="text-2xl font-semibold tracking-tight">
                 Send a message
               </h2>
-              <p className="text-sm text-base-content/60">
-                This form sends your message directly to my inbox.
-              </p>
             </div>
             {status === "success" ? (
-              <div className="rounded-2xl border border-success/30 bg-success/10 p-6 text-success">
+              <div className="p-6 border rounded-2xl border-success/30 bg-success/10 text-success">
                 <p className="text-lg font-semibold">{statusMessage}</p>
                 <p className="mt-2 text-sm text-success/80">
-                  I usually respond within 1–2 business days.
+                  I usually reply in 1–2 days.
                 </p>
               </div>
             ) : (
@@ -131,13 +128,13 @@
                 onSubmit={handleSubmit}
               >
                 <div className="grid gap-6 md:grid-cols-2">
-                  <label className="form-control w-full flex flex-col gap-1">
-                    <span className="label-text text-sm text-base-content/70">
+                  <label className="flex flex-col w-full gap-1 form-control">
+                    <span className="text-sm label-text text-base-content/70">
                       Name
                     </span>
                     <input
                       type="text"
-                      className="input input-bordered w-full"
+                      className="w-full input input-bordered"
                       value={formState.name}
                       onChange={(event) => handleChange("name", event.target.value)}
                       name="name"
@@ -145,13 +142,13 @@
                     />
                   </label>
 
-                  <label className="form-control w-full flex flex-col gap-1">
-                    <span className="label-text text-sm text-base-content/70">
+                  <label className="flex flex-col w-full gap-1 form-control">
+                    <span className="text-sm label-text text-base-content/70">
                       Email
                     </span>
                     <input
                       type="email"
-                      className="input input-bordered w-full"
+                      className="w-full input input-bordered"
                       value={formState.email}
                       onChange={(event) => handleChange("email", event.target.value)}
                       name="email"
@@ -160,12 +157,12 @@
                   </label>
                 </div>
 
-                <label className="form-control w-full flex flex-col gap-1">
-                  <span className="label-text text-sm text-base-content/70">
+                <label className="flex flex-col w-full gap-1 form-control">
+                  <span className="text-sm label-text text-base-content/70">
                     What do you need help with?
                   </span>
                   <select
-                    className="select select-bordered w-full"
+                    className="w-full select select-bordered"
                     value={formState.help}
                     onChange={(event) => handleChange("help", event.target.value)}
                     required
@@ -181,12 +178,12 @@
                   </select>
                 </label>
 
-                <label className="form-control w-full flex flex-col gap-1">
-                  <span className="label-text text-sm text-base-content/70">
+                <label className="flex flex-col w-full gap-1 form-control">
+                  <span className="text-sm label-text text-base-content/70">
                     Project details
                   </span>
                   <textarea
-                    className="textarea textarea-bordered h-36 w-full"
+                    className="w-full textarea textarea-bordered h-36"
                     value={formState.details}
                     onChange={(event) =>
                       handleChange("details", event.target.value)
@@ -195,7 +192,7 @@
                     required
                   />
                 </label>
-                <div className="space-y-3 pt-1">
+                <div className="pt-1 space-y-3">
                   <button
                     className="btn btn-primary btn-wide"
                     type="submit"
@@ -207,7 +204,7 @@
                     <p className="text-xs text-error">{statusMessage}</p>
                   )}
                   <p className="text-xs text-base-content/60">
-                    I usually respond within 1–2 business days.
+                    I usually reply in 1–2 days.
                   </p>
                 </div>
               </form>

@@ -2,28 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import PageCascade from "@/components/PageCascade";
 
-const strengths = [
-  "Next.js, TypeScript, JavaScript",
-  "React, HTML, CSS, SCSS, Bootstrap",
-  "Node.js, PHP, Laravel",
-  "Oracle, MySQL, Firebase",
-  "ElasticSearch, Algolia, Stripe",
-  "Git, ButterCMS",
-];
-
-const focusAreas = [
-  {
-    title: "CMS + tooling",
-    description: "Schema management, previews, and editor-friendly workflows.",
-  },
-  {
-    title: "Commerce flows",
-    description: "Checkout, search, and data-driven UI optimization.",
-  },
-  {
-    title: "Full stack delivery",
-    description: "Frontend UI paired with API and data integrations.",
-  },
+const principles = [
+  "Craft with care: clean UI, accessible patterns, and thoughtful details.",
+  "Keep it clear: simple plans, steady updates, and honest timelines.",
+  "Own the outcome: I handle UI, data, and deployment so projects ship cleanly.",
 ];
 
 export default function AboutPage() {
@@ -44,85 +26,60 @@ export default function AboutPage() {
                 priority
               />
             </div>
-            <div className="flex flex-wrap gap-2">
-              <span className="badge badge-outline">Vineyard, UT</span>
-              <span className="badge badge-outline">5 years experience</span>
-              <span className="badge badge-outline">Full stack</span>
-            </div>
           </div>
           <div className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.3em] text-base-content/60">
-              About
-            </p>
             <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              Full Stack Web Developer focused on clean UI and reliable
-              integrations.
+              About me
             </h1>
             <div className="space-y-4 text-base text-base-content/70">
               <p>
-                I build and maintain web applications across front-end and
-                back-end stacks, with a focus on Next.js, TypeScript, and
-                CMS-driven sites.
+                Hi! I'm Evan,
               </p>
               <p>
-                Recent work includes CMS tooling, checkout, and
-                internal productivity tools.
+                A full stack web developer specializing in building and
+                shipping modern web applications with Next.js and TypeScript.
+              </p>
+              <p>
+                I got into web development as a computer science major when I
+                landed a job building the campus Housing site. I fell in
+                love with the full stack nature of it: databases, deployments,
+                and the UI all working together.
+              </p>
+              <p>
+                Now many years later, I have had the priviledge of working on multiple
+                ecommerce platforms, content management systems, and internal tools.
+                Most recently, I have had the priviledge of leading web delivery for Traeger.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="p-4 border rounded-2xl border-base-300 bg-base-200/40">
-                <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
-                  Now
-                </p>
-                <p className="text-sm text-base-content/80">
-                  Full Stack Developer II
-                </p>
-              </div>
-              <div className="p-4 border rounded-2xl border-base-300 bg-base-200/40">
-                <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
-                  Open to
-                </p>
-                <p className="text-sm text-base-content/80">
-                  Part Time and Contract Roles
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="grid gap-8 lg:grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] lg:items-start">
-        <div className="space-y-3">
-          <h2 className="text-3xl font-semibold tracking-tight">Toolkit</h2>
+      <div className="p-6 border rounded-3xl border-base-300 bg-base-100/70 md:p-8">
+        <div className="mb-4 space-y-2">
+          <h2 className="text-3xl font-semibold tracking-tight">Principles</h2>
           <p className="text-base text-base-content/70">
-            Technologies used across recent roles.
+            The way I approach work and collaboration.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3">
-          {strengths.map((item) => (
-            <span key={item} className="px-4 py-3 text-sm badge badge-outline">
-              {item}
-            </span>
+        <ul className="space-y-3 text-sm text-base-content/70">
+          {principles.map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <span className="flex-none w-2 h-2 mt-1 rounded-full bg-primary" />
+              <span>{item}</span>
+            </li>
           ))}
-        </div>
-      </section>
+        </ul>
+      </div>
 
-      <section className="grid gap-6 lg:grid-cols-3">
-        {focusAreas.map((area, index) => (
-          <div
-            key={area.title}
-            className={`rounded-3xl border border-base-300 bg-base-100/70 p-6 ${
-              index === 1 ? "lg:translate-y-6" : ""
-            }`}
-          >
-            <p className="text-xs uppercase tracking-[0.25em] text-base-content/60">
-              {area.title}
-            </p>
-            <p className="mt-3 text-base text-base-content/70">
-              {area.description}
-            </p>
-          </div>
-        ))}
+      <section className="p-6 border rounded-3xl border-base-300 bg-base-100/70 md:p-8">
+        <div className="space-y-3">
+          <h2 className="text-2xl font-semibold tracking-tight">Outside of work</h2>
+          <p className="text-base text-base-content/70">
+            Outside of work I enjoy activities like jogging on trails near Utah Lake, playing/composing piano music, and
+            experimenting in the kitchen with new recipes.
+          </p>
+        </div>
       </section>
 
       <section className="rounded-[28px] border border-base-300 bg-gradient-to-br from-base-200/50 via-base-100 to-base-200/10 p-8 md:p-10">
